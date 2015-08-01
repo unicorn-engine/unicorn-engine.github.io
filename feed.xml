@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unicorn</title>
+    <description>The ultimate CPU emulator</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Websit launched!</title>
+        <description>&lt;p&gt;We are happy to launch the website for Unicorn CPU Emulator! Also find here the mailing list and twitter address where we will update information on the project.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Unicorn now has a &lt;a href=&quot;http://www.freelists.org/list/unicorn-engine&quot;&gt;mailing list&lt;/a&gt;. Subscribe to the list for updated information &amp;amp; do conversation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Users are also encouraged to follow us on &lt;a href=&quot;&quot;&gt;Twitter&lt;/a&gt; for important announcements.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 01 Aug 2015 00:00:00 +0800</pubDate>
+        <link>/launch</link>
+        <guid isPermaLink="true">/launch</guid>
+      </item>
+    
+  </channel>
+</rss>
