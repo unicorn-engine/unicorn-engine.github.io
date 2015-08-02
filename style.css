@@ -280,7 +280,7 @@ nav a {
 }
 
 .posts > .post {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   border-bottom: 1px solid #eee;
 }
 
@@ -305,14 +305,14 @@ nav a {
 }
 
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 30px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #eee;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
