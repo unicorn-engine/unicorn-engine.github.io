@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/beta</loc>
+    <lastmod>2015-08-07T00:00:00-07:00</lastmod>
+  </url>
+  <url>
     <loc>/blackhat2015</loc>
-    <lastmod>2015-08-02T00:00:00+08:00</lastmod>
+    <lastmod>2015-08-02T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/launch</loc>
-    <lastmod>2015-08-01T00:00:00+08:00</lastmod>
+    <lastmod>2015-08-01T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/404.html</loc>
   </url>
   <url>
     <loc>/contact/</loc>
+  </url>
+  <url>
+    <loc>/docs/</loc>
+  </url>
+  <url>
+    <loc>/download/</loc>
   </url>
   <url>
     <loc>/</loc>

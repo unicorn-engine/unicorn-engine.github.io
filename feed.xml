@@ -7,6 +7,28 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Call for beta test!</title>
+        <description>&lt;p&gt;We gave a presentation on Unicorn engine at the &lt;a href=&quot;https://www.blackhat.com/us-15/briefings.html#unicorn-next-generation-cpu-emulator-framework&quot;&gt;BlackHat USA 2015 security conference&lt;/a&gt;. The talk went well, and we got nice feedbacks from the audience.&lt;/p&gt;
+
+&lt;p&gt;The slides is now available in &lt;a href=&quot;BHUSA2015-unicorn.pdf&quot;&gt;PDF format&lt;/a&gt;. Find in the presentation more details on the design &amp;amp; implementation of Unicorn.&lt;/p&gt;
+
+&lt;p&gt;We would like to improve the code quality before the official release. Therefore, Unicorn project is now calling for beta testers!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Are you are willing to help to test Unicorn to find &amp;amp; clean bugs?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Can you code? You do not need to be an excellent coder, but writing some tools using Unicorn is the only way to find bugs at this phase.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If the answer is &amp;quot;Yes&amp;quot; for both questions, then &lt;a href=&quot;contact.html&quot;&gt;email us&lt;/a&gt; with some self-instroduction on why you are interested, and how you can help.&lt;/p&gt;
+
+&lt;p&gt;Unicorn will be released soon with full source code - in GPL license - after this short beta phase.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Aug 2015 00:00:00 -0700</pubDate>
+        <link>/beta</link>
+        <guid isPermaLink="true">/beta</guid>
+      </item>
+    
+      <item>
         <title>BlackHat USA 2015 presentation</title>
         <description>&lt;p&gt;We are working to release more contents &amp;amp; prepare for our &lt;a href=&quot;https://www.blackhat.com/us-15/briefings.html#unicorn-next-generation-cpu-emulator-framework&quot;&gt;BlackHat USA 2015 talk&lt;/a&gt;. Meanwhile, check out a sample code in &lt;a href=&quot;http://dpaste.com/0533J4M&quot;&gt;Python&lt;/a&gt; and &lt;a href=&quot;http://dpaste.com/225EPFT&quot;&gt;C language&lt;/a&gt; to see how Unicorn can be useful for a real problem.&lt;/p&gt;
 
@@ -14,7 +36,7 @@
 
 &lt;p&gt;See you there with some cool Unicorn stickers, soon!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 02 Aug 2015 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 02 Aug 2015 00:00:00 -0700</pubDate>
         <link>/blackhat2015</link>
         <guid isPermaLink="true">/blackhat2015</guid>
       </item>
@@ -28,7 +50,7 @@
 &lt;li&gt;&lt;p&gt;Users are also encouraged to follow us on &lt;a href=&quot;&quot;&gt;Twitter&lt;/a&gt; for important announcements.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sat, 01 Aug 2015 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 01 Aug 2015 00:00:00 -0700</pubDate>
         <link>/launch</link>
         <guid isPermaLink="true">/launch</guid>
       </item>
