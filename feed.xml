@@ -10,7 +10,7 @@
         <title>Call for beta test!</title>
         <description>&lt;p&gt;We gave a presentation on Unicorn engine at the &lt;a href=&quot;https://www.blackhat.com/us-15/briefings.html#unicorn-next-generation-cpu-emulator-framework&quot;&gt;BlackHat USA 2015 security conference&lt;/a&gt;. The talk went well, and we got nice feedbacks from the audience.&lt;/p&gt;
 
-&lt;p&gt;The slides is now available in &lt;a href=&quot;BHUSA2015-unicorn.pdf&quot;&gt;PDF format&lt;/a&gt;. Find in the presentation more details on the design &amp;amp; implementation of Unicorn.&lt;/p&gt;
+&lt;p&gt;The slides is now available in &lt;a href=&quot;/BHUSA2015-unicorn.pdf&quot;&gt;PDF format&lt;/a&gt;. Find in the presentation more details on the design &amp;amp; implementation of Unicorn.&lt;/p&gt;
 
 &lt;p&gt;We would like to improve the code quality before the official release. Therefore, Unicorn project is now calling for beta testers!&lt;/p&gt;
 
