@@ -7,6 +7,54 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Beta-test phase begin!</title>
+        <description>&lt;p&gt;We are excited to announce that the beta-test phase of the Unicorn engine has officially kicked off!&lt;/p&gt;
+
+&lt;p&gt;The plan is to run this testing phase in 2-3 weeks, then if the code is considered good enough, version 1.0 will be released to public immediately.&lt;/p&gt;
+
+&lt;p&gt;We are honoured to have following heroes helping out us in this phase (list is in no particular order)&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Nguyen Tan Cong&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Loi Anh Tuan&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Edgar Barbosa&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Joxean Koret&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Chris Eagle&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jay Little, Trail of Bits&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jeong Wook Oh&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Luis Miras&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Yan Shoshitaishvili, Shellphish &amp;amp; UC Santa Barbara&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erik Fischer&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Darel Griffin, NCC Group&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anton Cherepanov&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mohamed Saher (halsten)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tyler Colgan&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jonathon Reinhart&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Blue Skeye&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Chris Maixner&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sergi Alvarez, aka pancake (author of radare)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ryan Hileman&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tim &amp;quot;diff&amp;quot; Strazzere&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;WanderingGlitch of the Zero Day Initiative&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sascha Schirra&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;François Serman&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sean Heelan&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Luke Burnett&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parker Thompson&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Daniel Godas-Lopez&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Antonio &amp;quot;s4tan&amp;quot; Parata&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Corey Kallenberg&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Shift&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 01 Sep 2015 00:00:00 +0800</pubDate>
+        <link>/beta-start</link>
+        <guid isPermaLink="true">/beta-start</guid>
+      </item>
+    
+      <item>
         <title>Call for beta test!</title>
         <description>&lt;p&gt;We gave a presentation on Unicorn engine at the &lt;a href=&quot;https://www.blackhat.com/us-15/briefings.html#unicorn-next-generation-cpu-emulator-framework&quot;&gt;BlackHat USA 2015 security conference&lt;/a&gt;. The talk went well, and we got nice feedbacks from the audience.&lt;/p&gt;
 
@@ -23,7 +71,7 @@
 
 &lt;p&gt;Unicorn will be released soon with full source code - in GPL license - after this short beta phase.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 07 Aug 2015 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 07 Aug 2015 00:00:00 +0800</pubDate>
         <link>/beta</link>
         <guid isPermaLink="true">/beta</guid>
       </item>
@@ -36,7 +84,7 @@
 
 &lt;p&gt;See you there with some cool Unicorn stickers, soon!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 02 Aug 2015 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 02 Aug 2015 00:00:00 +0800</pubDate>
         <link>/blackhat2015</link>
         <guid isPermaLink="true">/blackhat2015</guid>
       </item>
@@ -50,7 +98,7 @@
 &lt;li&gt;&lt;p&gt;Users are also encouraged to follow us on &lt;a href=&quot;&quot;&gt;Twitter&lt;/a&gt; for important announcements.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sat, 01 Aug 2015 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 01 Aug 2015 00:00:00 +0800</pubDate>
         <link>/launch</link>
         <guid isPermaLink="true">/launch</guid>
       </item>
