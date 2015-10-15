@@ -82,7 +82,7 @@
 <div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;unicorn/unicorn.h&gt;</span>
 <span class="lineno"> 2</span> 
 <span class="lineno"> 3</span> <span class="c1">// code to be emulated</span>
-<span class="lineno"> 4</span> <span class="cp">#define X86_CODE32 &quot;\x41\x4a&quot; </span><span class="c1">// INC ecx; DEC dex</span>
+<span class="lineno"> 4</span> <span class="cp">#define X86_CODE32 &quot;\x41\x4a&quot; </span><span class="c1">// INC ecx; DEC edx</span>
 <span class="lineno"> 5</span> 
 <span class="lineno"> 6</span> <span class="c1">// memory address where emulation starts</span>
 <span class="lineno"> 7</span> <span class="cp">#define ADDRESS 0x1000000</span>
@@ -187,7 +187,7 @@ The C sample is intuitive, but just in case, readers can find below the explanat
 <span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">unicorn.x86_const</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="lineno"> 4</span> 
 <span class="lineno"> 5</span> <span class="c"># code to be emulated</span>
-<span class="lineno"> 6</span> <span class="n">X86_CODE32</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;</span><span class="se">\x41\x4a</span><span class="s">&quot;</span> <span class="c"># INC ecx; DEC dex</span>
+<span class="lineno"> 6</span> <span class="n">X86_CODE32</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;</span><span class="se">\x41\x4a</span><span class="s">&quot;</span> <span class="c"># INC ecx; DEC edx</span>
 <span class="lineno"> 7</span> 
 <span class="lineno"> 8</span> <span class="c"># memory address where emulation starts</span>
 <span class="lineno"> 9</span> <span class="n">ADDRESS</span> <span class="o">=</span> <span class="mh">0x1000000</span>
