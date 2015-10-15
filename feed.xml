@@ -21,7 +21,7 @@
         <title>Firt public release!</title>
         <description>&lt;p&gt;We are very excited to announce the first public release, version 0.9, of Unicorn Engine!&lt;/p&gt;
 
-&lt;p&gt;The source code &amp;amp; precompiled binaries are available in the &lt;a href=&quot;/download/&quot;&gt;download&lt;/a&gt; section. See &lt;a href=&quot;docs/&quot;&gt;documentation&lt;/a&gt; for how to compile and install Unicorn.&lt;/p&gt;
+&lt;p&gt;The source code &amp;amp; precompiled binaries are available in the &lt;a href=&quot;/download/&quot;&gt;download&lt;/a&gt; section. See &lt;a href=&quot;/docs/&quot;&gt;documentation&lt;/a&gt; for how to compile and install Unicorn.&lt;/p&gt;
 
 &lt;p&gt;A quick tutorial on how to program with Unicorn in C &amp;amp; Python can be found &lt;a href=&quot;http://www.unicorn-engine.org/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
