@@ -7,10 +7,38 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>0.9</title>
+        <description>&lt;ul&gt;
+&lt;li&gt;First public release.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 15 Oct 2015 00:00:00 +0800</pubDate>
+        <link>/Version-0.9-changelog</link>
+        <guid isPermaLink="true">/Version-0.9-changelog</guid>
+      </item>
+    
+      <item>
+        <title>Firt public release!</title>
+        <description>&lt;p&gt;We are very excited to announce the first public release of Unicorn Engine, version 0.9!&lt;/p&gt;
+
+&lt;p&gt;The source code &amp;amp; precompiled binaries are available in the &lt;a href=&quot;/download/&quot;&gt;download&lt;/a&gt; section. See &lt;a href=&quot;docs/&quot;&gt;documentation&lt;/a&gt; for how to compile and install Unicorn.&lt;/p&gt;
+
+&lt;p&gt;Some documentations are available at &lt;a href=&quot;/docs&quot;&gt;docs&lt;/a&gt; section. More information will follow, soon.&lt;/p&gt;
+
+&lt;p&gt;We would like show our gratitude to the beta testers for bug reports &amp;amp; code contributions during the beta phase! Their invaluable helps have been tremendous for us to keep this far.&lt;/p&gt;
+
+&lt;p&gt;Unicorn aims to lay the ground for innovative works. We look forward to seeing many advanced research &amp;amp; development in the security area built on this framework. Let the fun begin!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Oct 2015 00:00:00 +0800</pubDate>
+        <link>/Version-0.9</link>
+        <guid isPermaLink="true">/Version-0.9</guid>
+      </item>
+    
+      <item>
         <title>Beta-test phase begin!</title>
         <description>&lt;p&gt;We are excited to announce that the beta-test phase of the Unicorn engine has officially kicked off!&lt;/p&gt;
 
-&lt;p&gt;The plan is to run this testing phase in 2-3 weeks, then if the code is considered good enough, version 1.0 will be released to public immediately.&lt;/p&gt;
+&lt;p&gt;The plan is to run this testing phase in few weeks, then if the code is considered good enough, version 1.0 will be released to public immediately.&lt;/p&gt;
 
 &lt;p&gt;We are honoured to have following heroes helping out us in this phase (list is in no particular order)&lt;/p&gt;
 

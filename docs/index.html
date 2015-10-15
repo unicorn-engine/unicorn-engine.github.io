@@ -82,7 +82,59 @@
   <div class="entry">
     <p>Find details on the design &amp; implementation of Unicorn in this <a href="/BHUSA2015-unicorn.pdf">BlackHat USA 2015 slides</a>.</p>
 
-<p>More documentation on how to compile/install/programming with Unicorn will be out soon.</p>
+<hr>
+
+<h2>Compile &amp; install Unicorn</h2>
+
+<p>There are several methods to compile and install Unicorn.</p>
+
+<h3>1. From source code</h3>
+
+<p>Find the source in <a href="/download">Download</a> section and follow the instructions in <a href="https://github.com/unicorn-engine/unicorn/blob/master/COMPILE.TXT">COMPILE.TXT</a> to build and install the core of Unicorn.</p>
+
+<h4>2. Python binding <img src="/images/python.png" height="24" width="24"></h4>
+
+<p>The Python binding depends on <em>the core</em>, so make sure to <em>install the core before</em> you can use this binding.</p>
+
+<p>On *nix platforms, do:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>bindings/python
+<span class="nv">$ </span>sudo make install</code></pre></div>
+
+<p>On Windows, do:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>bindings/python
+python setup.py install</code></pre></div>
+
+<p>For Windows, after above steps, you need to copy all the <em>DLL files</em> from the <em>Windows core engine</em> in the <a href="/download">Download</a> section into directory *C:\location<em>to</em>python\Lib\site-packages\unicorn*.</p>
+
+<hr>
+
+<h3>3. Precompiled binaries <img src="/images/windows.png" height="24" width="24"> <img src="/images/jar.png" height="24" width="24"></h3>
+
+<p>At the moment precompiled binaries for <em>Windows</em> &amp; <em>Java</em> are available in our <a href="/download">Download</a> section.</p>
+
+<ul>
+<li><strong>Windows</strong> <img src="/images/windows.png" height="24" width="24"></li>
+</ul>
+
+<p>For all the bindings, firstly you still need to install the <em>Windows core engine</em>, which includes the static/dynamic libraries and also the headers (*.h) for C programming.</p>
+
+<ul>
+<li><strong>Java</strong> <img src="/images/jar.png" height="24" width="24"></li>
+</ul>
+
+<p>Java binding is availabe in JAR package.</p>
+
+<hr>
+
+<h2>Programming</h2>
+
+<p>After installation, find in tutorials below how to write your tools based on Unicorn using your favorite programming languages.</p>
+
+<ul>
+<li><a href="tutorial.html">Quick tutorial on programming with Unicorn - with C &amp; Python</a>.</li>
+</ul>
 
   </div>
 </article>

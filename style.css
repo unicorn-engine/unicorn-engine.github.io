@@ -316,6 +316,29 @@ footer {
   text-align: center;
 }
 
+.download {
+  border-radius: 2px;
+  color: #ffffff;
+  padding: 0.25em;
+  background-color: #993333;
+  font-size: 90%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.download {
+  margin-top: -2em;
+  float: right;
+  width: 8em;
+  transition: .35s ease;
+  text-transform: uppercase;
+}
+
+.download:hover {
+  background-color: #ff0000;
+  box-shadow: 0px 0px 8px #ffff66;
+}
+
 .highlight {
   background-color: #efefef;
   padding: 7px 7px 7px 10px;

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/Version-0.9-changelog</loc>
+    <lastmod>2015-10-15T00:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>/Version-0.9</loc>
+    <lastmod>2015-10-15T00:00:00+08:00</lastmod>
+  </url>
+  <url>
     <loc>/beta-start</loc>
     <lastmod>2015-09-01T00:00:00+08:00</lastmod>
   </url>
@@ -23,7 +31,13 @@
     <loc>/contact/</loc>
   </url>
   <url>
+    <loc>/changelog/</loc>
+  </url>
+  <url>
     <loc>/docs/</loc>
+  </url>
+  <url>
+    <loc>/download/</loc>
   </url>
   <url>
     <loc>/download/</loc>
@@ -32,6 +46,9 @@
     <loc>/</loc>
   </url>
   <url>
-    <loc>/showcase.html</loc>
+    <loc>/showcase/</loc>
+  </url>
+  <url>
+    <loc>/docs/tutorial.html</loc>
   </url>
 </urlset>

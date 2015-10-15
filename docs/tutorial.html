@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Programming with C & Python languages – Unicorn – The ultimate CPU emulator</title>
+
+        <meta name="go-import" content="unicorn-engine.org git https://github.com/unicorn-engine/unicorn/bindings/go/unicorn">
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="The ultimate CPU emulator">
+    <meta property="og:description" content="The ultimate CPU emulator" />
+    
+    <meta name="author" content="Unicorn" />
+
+    
+    <meta property="og:title" content="Programming with C & Python languages" />
+    <meta property="twitter:title" content="Programming with C & Python languages" />
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Unicorn - The ultimate CPU emulator" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="/images/unicorn.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Unicorn</a></h1>
+            <p class="site-description">The ultimate CPU emulator</p>
+          </div>
+
+          <nav>
+            <a href="/download">Download</a>
+            <a href="/docs">Docs</a>
+            <a href="/showcase">Showcase</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <h2>Tutorial for Unicorn</h2>
+
+<p>This short tutorial shows how the Unicorn API works and how easy it is to emulate binary code. There are more APIs than those used here, but these are all we need to get started.</p>
+
+<h3>1. Tutorial for C language</h3>
+
+<p>The following sample code presents how to emulate 32-bit code of X86 in C language.</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;unicorn/unicorn.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="c1">// code to be emulated</span>
+<span class="lineno"> 4</span> <span class="cp">#define X86_CODE32 &quot;\x41\x4a&quot; </span><span class="c1">// INC ecx; DEC dex</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="c1">// memory address where emulation starts</span>
+<span class="lineno"> 7</span> <span class="cp">#define ADDRESS 0x1000000</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span>
+<span class="lineno">10</span> <span class="p">{</span>
+<span class="lineno">11</span>   <span class="n">uc_engine</span> <span class="o">*</span><span class="n">uc</span><span class="p">;</span>
+<span class="lineno">12</span>   <span class="n">uc_err</span> <span class="n">err</span><span class="p">;</span>
+<span class="lineno">13</span>   <span class="kt">int</span> <span class="n">r_ecx</span> <span class="o">=</span> <span class="mh">0x1234</span><span class="p">;</span>     <span class="c1">// ECX register</span>
+<span class="lineno">14</span>   <span class="kt">int</span> <span class="n">r_edx</span> <span class="o">=</span> <span class="mh">0x7890</span><span class="p">;</span>     <span class="c1">// EDX register</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Emulate i386 code</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span>   <span class="c1">// Initialize emulator in X86-32bit mode</span>
+<span class="lineno">19</span>   <span class="n">err</span> <span class="o">=</span> <span class="n">uc_open</span><span class="p">(</span><span class="n">UC_ARCH_X86</span><span class="p">,</span> <span class="n">UC_MODE_32</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">uc</span><span class="p">);</span>
+<span class="lineno">20</span>   <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="n">UC_ERR_OK</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">21</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed on uc_open() with error returned: %u</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+<span class="lineno">22</span>     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="lineno">23</span>   <span class="p">}</span>
+<span class="lineno">24</span> 
+<span class="lineno">25</span>   <span class="c1">// map 2MB memory for this emulation</span>
+<span class="lineno">26</span>   <span class="n">uc_mem_map</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="n">UC_PROT_ALL</span><span class="p">);</span>
+<span class="lineno">27</span> 
+<span class="lineno">28</span>   <span class="c1">// write machine code to be emulated to memory</span>
+<span class="lineno">29</span>   <span class="k">if</span> <span class="p">(</span><span class="n">uc_mem_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="n">X86_CODE32</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+<span class="lineno">30</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to write emulation code to memory, quit!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="lineno">31</span>     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="lineno">32</span>   <span class="p">}</span>
+<span class="lineno">33</span> 
+<span class="lineno">34</span>   <span class="c1">// initialize machine registers</span>
+<span class="lineno">35</span>   <span class="n">uc_reg_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_ecx</span><span class="p">);</span>
+<span class="lineno">36</span>   <span class="n">uc_reg_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_edx</span><span class="p">);</span>
+<span class="lineno">37</span> 
+<span class="lineno">38</span>   <span class="c1">// emulate code in infinite time &amp; unlimited instructions</span>
+<span class="lineno">39</span>   <span class="n">err</span><span class="o">=</span><span class="n">uc_emu_start</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="n">ADDRESS</span> <span class="o">+</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="lineno">40</span>   <span class="k">if</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">41</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed on uc_emu_start() with error returned %u: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="lineno">42</span>       <span class="n">err</span><span class="p">,</span> <span class="n">uc_strerror</span><span class="p">(</span><span class="n">err</span><span class="p">));</span>
+<span class="lineno">43</span>   <span class="p">}</span>
+<span class="lineno">44</span> 
+<span class="lineno">45</span>   <span class="c1">// now print out some registers</span>
+<span class="lineno">46</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Emulation done. Below is the CPU context</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="lineno">47</span> 
+<span class="lineno">48</span>   <span class="n">uc_reg_read</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_ecx</span><span class="p">);</span>
+<span class="lineno">49</span>   <span class="n">uc_reg_read</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_edx</span><span class="p">);</span>
+<span class="lineno">50</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; ECX = 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">r_ecx</span><span class="p">);</span>
+<span class="lineno">51</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; EDX = 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">r_edx</span><span class="p">);</span>
+<span class="lineno">52</span> 
+<span class="lineno">53</span>   <span class="n">uc_close</span><span class="p">(</span><span class="n">uc</span><span class="p">);</span>
+<span class="lineno">54</span> 
+<span class="lineno">55</span>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">56</span> <span class="p">}</span></code></pre></div>
+
+<p><br>
+To compile this file, we need a <em>Makefile</em> like below.</p>
+
+<div class="highlight"><pre><code class="language-makefile" data-lang="makefile"><span class="nv">LDFLAGS</span> <span class="o">+=</span> <span class="k">$(</span>shell pkg-config --libs glib-2.0<span class="k">)</span> -lpthread -lm -lunicorn
+
+<span class="nf">all</span><span class="o">:</span> <span class="n">test</span>
+<span class="nf">%</span><span class="o">:</span> %.<span class="n">c</span>
+    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="nv">$^</span> <span class="k">$(</span>LDFLAGS<span class="k">)</span> -o <span class="nv">$@</span></code></pre></div>
+
+<p><br>
+Readers can get this sample code in this <a href="/samples/test1.tgz">tarball file</a>. Compile and run it as follows (demonstrated on Mac OS X).</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>make
+cc  test1.c -L/usr/local/Cellar/glib/2.44.1/lib -L/usr/local/opt/gettext/lib -lglib-2.0 -lintl  -lpthread -lm -lunicorn -o test1
+
+<span class="nv">$ </span>./test1
+Emulate i386 code
+Emulation <span class="k">done</span>. Below is the CPU context
+&gt;&gt;&gt; <span class="nv">ECX</span> <span class="o">=</span> 0x1235
+&gt;&gt;&gt; <span class="nv">EDX</span> <span class="o">=</span> 0x788f</code></pre></div>
+
+<p><br>
+The C sample is intuitive, but just in case, readers can find below the explanation for each line of <em>test1.c</em>.</p>
+
+<ul>
+<li><p>Line 1: Include header file <strong>unicorn.h</strong> before we do anything.</p></li>
+<li><p>Line 4: Raw binary code we want to emulate. The code in this sample is in hex mode, and represents two X86 instructions &quot;<em>INC ecx</em>&quot; and &quot;<em>DEC edx</em>&quot;.</p></li>
+<li><p>Line 7: Virtual address in which we will emulate the code above.</p></li>
+<li><p>Line 11: Declare a pointer to a handle of the type <strong>uc_engine</strong>. This handle will be used at every API of Unicorn.</p></li>
+<li><p>Line 12: Declare a variable with data type <strong>uc_err</strong> for possible error returned from Unicor API.</p></li>
+<li><p>Line 13 ~ 14: Declare 2 variables of <em>int</em> type (4 bytes) for two X86 registers <em>ECX</em> and <em>EDX</em>. It is important to use the right data types for registers, so the variable size is big enough to contain the registers. For this reason, type <strong>uint64_t</strong> is recommended for 64-bit registers.</p></li>
+<li><p>Line 19 ~ 24: Initialize Unicorn with function <strong>uc_open</strong>. This API accepts 3 arguments: the hardware architecture, hardware mode and pointer to Unicorn handle. In this sample, we want to emulate 32-bit code for X86 architecture. In return, we have the handle updated in variable <em>uc</em>. This API can fail in extreme cases, so our sample verifies the returned result against the error code <em>UC<em>ERR</em>OK</em>.</p></li>
+<li><p>Line 26: Map 2MB of memory for this emulation with function <strong>uc_mem_map</strong> at the virtual address declared on line <em>11</em>. All the CPU operations during this process should only access to this memory. This memory is mapped with all permissions READ, WRITE and EXECUTE (represented by combined permission <strong>UC<em>PROT</em>ALL</strong>).</p></li>
+<li><p>Line 29: Write code to be emulated into the memory we just mapped above. Function <strong>uc_mem_write</strong> takes 4 arguments: the handle, address to write to, the code to be written to memory and its size.</p></li>
+<li><p>Line 35 ~ 36: Set values of <em>ECX</em> and <em>EDX</em> registers with function <strong>uc_reg_write</strong>.</p></li>
+<li><p>Line 39: Start the emulation with function <strong>uc_emu_start</strong>. This API takes 5 arguments: the handle, address of the emulated code, address where emulation stops (which is right after the last byte of <em>X86_CODE32</em>), the time to be emulated, and number of instructions to be emulated. In this case, we want to run in infinite time and unlimited number of instructions, so the last two arguments are set to 0.</p></li>
+<li><p>Line 48 ~ 51: Print out values of registers <em>ECX</em> and <em>EDX</em>. We read the value of registers with function <strong>uc_reg_read</strong>.</p></li>
+<li><p>Line 53: Finish emulation with a call to function <strong>uc_close</strong>.</p></li>
+</ul>
+
+<hr>
+
+<h3>2. Tutorial for Python language</h3>
+
+<p>The following code presents exactly the same example as above, but in Python: how to emulate 32-bit code of X86.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="lineno"> 2</span> <span class="kn">from</span> <span class="nn">unicorn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">unicorn.x86_const</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span> <span class="c"># code to be emulated</span>
+<span class="lineno"> 6</span> <span class="n">X86_CODE32</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;</span><span class="se">\x41\x4a</span><span class="s">&quot;</span> <span class="c"># INC ecx; DEC dex</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="c"># memory address where emulation starts</span>
+<span class="lineno"> 9</span> <span class="n">ADDRESS</span> <span class="o">=</span> <span class="mh">0x1000000</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Emulate i386 code&quot;</span><span class="p">)</span>
+<span class="lineno">12</span> <span class="k">try</span><span class="p">:</span>
+<span class="lineno">13</span>     <span class="c"># Initialize emulator in X86-32bit mode</span>
+<span class="lineno">14</span>     <span class="n">mu</span> <span class="o">=</span> <span class="n">Uc</span><span class="p">(</span><span class="n">UC_ARCH_X86</span><span class="p">,</span> <span class="n">UC_MODE_32</span><span class="p">)</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span>     <span class="c"># map 2MB memory for this emulation</span>
+<span class="lineno">17</span>     <span class="n">mu</span><span class="o">.</span><span class="n">mem_map</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>     <span class="c"># write machine code to be emulated to memory</span>
+<span class="lineno">20</span>     <span class="n">mu</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="n">X86_CODE32</span><span class="p">)</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span>     <span class="c"># initialize machine registers</span>
+<span class="lineno">23</span>     <span class="n">mu</span><span class="o">.</span><span class="n">reg_write</span><span class="p">(</span><span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="mh">0x1234</span><span class="p">)</span>
+<span class="lineno">24</span>     <span class="n">mu</span><span class="o">.</span><span class="n">reg_write</span><span class="p">(</span><span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="mh">0x7890</span><span class="p">)</span>
+<span class="lineno">25</span> 
+<span class="lineno">26</span>     <span class="c"># emulate code in infinite time &amp; unlimited instructions</span>
+<span class="lineno">27</span>     <span class="n">mu</span><span class="o">.</span><span class="n">emu_start</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="n">ADDRESS</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">))</span>
+<span class="lineno">28</span> 
+<span class="lineno">29</span>     <span class="c"># now print out some registers</span>
+<span class="lineno">30</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Emulation done. Below is the CPU context&quot;</span><span class="p">)</span>
+<span class="lineno">31</span> 
+<span class="lineno">32</span>     <span class="n">r_ecx</span> <span class="o">=</span> <span class="n">mu</span><span class="o">.</span><span class="n">reg_read</span><span class="p">(</span><span class="n">UC_X86_REG_ECX</span><span class="p">)</span>
+<span class="lineno">33</span>     <span class="n">r_edx</span> <span class="o">=</span> <span class="n">mu</span><span class="o">.</span><span class="n">reg_read</span><span class="p">(</span><span class="n">UC_X86_REG_EDX</span><span class="p">)</span>
+<span class="lineno">34</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; ECX = 0x</span><span class="si">%x</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">r_ecx</span><span class="p">)</span>
+<span class="lineno">35</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; EDX = 0x</span><span class="si">%x</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">r_edx</span><span class="p">)</span>
+<span class="lineno">36</span> 
+<span class="lineno">37</span> <span class="k">except</span> <span class="n">UcError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="lineno">38</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;ERROR: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span></code></pre></div>
+
+<p><br>
+Readers can get this sample code <a href="/samples/test1.py">here</a>. Run it with Python as follows.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python test1.py
+
+Emulate i386 code
+Emulation <span class="k">done</span>. Below is the CPU context
+&gt;&gt;&gt; <span class="nv">ECX</span> <span class="o">=</span> 0x1235
+&gt;&gt;&gt; <span class="nv">EDX</span> <span class="o">=</span> 0x788f</code></pre></div>
+
+<p><br>
+The Python sample is intuitive, but just in case, readers can find below the explanation for each line of <em>test1.py</em>.</p>
+
+<ul>
+<li><p>Line 2 ~ 3: Import <strong>unicorn</strong> module before using Unicorn. This sample also uses some X86 register constants, so <strong>unicorn.x86_const</strong> is also needed.</p></li>
+<li><p>Line 6: Raw binary code we want to emulate. The code in this sample is in hex mode, and represents two X86 instructions &quot;<em>INC ecx</em>&quot; and &quot;<em>DEC edx</em>&quot;.</p></li>
+<li><p>Line 9: Virtual address in which we will emulate the code above.</p></li>
+<li><p>Line 14: Initialize Unicorn with class <strong>Uc</strong>. This class accepts 2 arguments: the hardware architecture and hardware mode. In this sample, we want to emulate 32-bit code for X86 architecture. In return, we have a variable of this class in <em>mu</em>.</p></li>
+<li><p>Line 17: Map 2MB of memory for this emulation with method <strong>mem_map</strong> at the address declared in line <em>9</em><em>. All the CPU operations during this process should only access to this memory. This memory is mapped with all permissions READ, WRITE and EXECUTE (represented by combined permission *</em>UC<em>PROT</em>ALL**).</p></li>
+<li><p>Line 20: Write code to be emulated into the memory we just mapped above. Method <strong>mem_write</strong> takes 2 arguments: the address to write to and the code to be written to memory.</p></li>
+<li><p>Line 23 ~ 24: Set values of <em>ECX</em> and <em>EDX</em> registers with method <strong>reg_write</strong>.</p></li>
+<li><p>Line 27: Start the emulation with method <strong>emu_start</strong>. This API takes 4 arguments: address of the emulated code, address where emulation stops (which is right after the last byte of <em>X86_CODE32</em>), the time to be emulated, and number of instructions to be emulated. If we ignore the last two arguments like in this example, Unicorn will emulate the code in infinite time and unlimited number of instructions.</p></li>
+<li><p>Line 32 ~ 35: Print out values of registers <em>ECX</em> and <em>EDX</em>. We read the value of registers with function <strong>reg_read</strong>.</p></li>
+</ul>
+
+<hr>
+
+<h3>3. More examples</h3>
+
+<p>This tutorial does not explain all the API of Unicorn yet.</p>
+
+<ul>
+<li><p>For more advanced C examples, see the code under directory <a href="https://github.com/unicorn-engine/unicorn/tree/master/samples">samples</a>.</p></li>
+<li><p>For more advanced samples in Python, see the code under directory <a href="https://github.com/unicorn-engine/unicorn/tree/master/bindings/python">bindings/python</a>.</p></li>
+</ul>
+
+<p>Have fun! If you do use Unicorn for something cool, let us know so we can <a href="/showcase">link to your products</a>.</p>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:unicorn.emu@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/unicorn-engine/unicorn"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/unicorn_engine"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
