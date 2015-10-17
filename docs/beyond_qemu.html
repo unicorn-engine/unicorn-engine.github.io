@@ -73,13 +73,11 @@
     <div id="main" role="main" class="container">
       <h3>Unicorn &amp; QEMU</h3>
 
-<p><br>
-Unicorn engine is based <a href="http://www.qemu.org">QEMU</a>, a great open source software emulator. Find more about the techinical details of Unicorn in our <a href="/BHUSA2015-unicorn.pdf">Blackhat USA 2015 slides</a>.</p>
+<p>Unicorn engine is based <a href="http://www.qemu.org">QEMU</a>, a great open source software emulator. Find more about the techinical details of Unicorn in our <a href="/BHUSA2015-unicorn.pdf">Blackhat USA 2015 slides</a>.</p>
 
 <p>A notable difference between Unicorn and QEMU is that we only focus on emulating CPU operations, but do not handle other parts of computer machine like QEMU. Internally, Unicorn reuses the CPU emulation component of QEMU as its core (with quite a lot of changes to adapt to our design). Therefore, <em>our engine is able to emulate all the instructions that QEMU can</em>, but beyond that we can do more &amp; do better in many aspects.</p>
 
-<p><br>
-The section below highlights the areas where Unicorn shines.</p>
+<p>The section below highlights the areas where Unicorn shines.</p>
 
 <ul>
 <li><p><strong>Framework</strong>: QEMU is a set of emulators, but not a framework. Therefore, you cannot build your own tools on top of QEMU, while this is the main purpose of Unicorn.</p></li>
