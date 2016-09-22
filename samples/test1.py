@@ -5,7 +5,7 @@ from unicorn import *
 from unicorn.x86_const import *
 
 # code to be emulated
-X86_CODE32 = b"\x41\x4a" # INC ecx; DEC dex
+X86_CODE32 = b"\x41\x4a" # INC ecx; DEC edx
 
 # memory address where emulation starts
 ADDRESS = 0x1000000
