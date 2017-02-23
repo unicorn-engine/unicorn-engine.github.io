@@ -90,7 +90,7 @@
 
 <h3>1. From source code</h3>
 
-<p>Find the source in <a href="/download">Download</a> section and follow the instructions in <a href="https://github.com/unicorn-engine/unicorn/blob/master/docs/COMPILE.md">COMPILE.md</a> to build and install the core of Unicorn.</p>
+<p>Find the source in <a href="/download">Download</a> section and follow the instructions in <a href="https://github.com/unicorn-engine/unicorn/blob/master/COMPILE.TXT">COMPILE.TXT</a> to build and install the core of Unicorn.</p>
 
 <h3>2. From repositories <img src="/images/osx.png" height="24" width="24"> <img src="/images/freebsd.png" height="24" width="24"> <img src="/images/openbsd.png" height="24" width="24"> <img src="/images/netbsd.png" height="24" width="24"></h3>
 
@@ -100,11 +100,11 @@
 
 <p><strong>Homebrew</strong> users can install the core of Unicorn with:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew install unicorn</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>  $ brew install unicorn</code></pre></figure>
 
 <p>Note that Homebrew installs libraries into its own directory, so you need to tell applications where to find them, for example with:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">export </span><span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/opt/unicorn/lib/:<span class="nv">$DYLD_LIBRARY_PATH</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>  $ <span class="nb">export</span> <span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/opt/unicorn/lib/:<span class="nv">$DYLD_LIBRARY_PATH</span></code></pre></figure>
 
 <h4>2.2 Pkgsrc - core engine <img src="/images/freebsd.png" height="24" width="24"> <img src="/images/openbsd.png" height="24" width="24"> <img src="/images/netbsd.png" height="24" width="24"></h4>
 
@@ -112,25 +112,30 @@
 
 <p>Installation from binary pre-built packages with:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pkgin install unicorn</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>  $ pkgin install unicorn</code></pre></figure>
 
 <p>Installation from sources with:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /usr/pkgsrc/emulators/unicorn <span class="o">&amp;&amp;</span> make install</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>  $ <span class="nb">cd</span> /usr/pkgsrc/emulators/unicorn <span class="o">&amp;&amp;</span> make install</code></pre></figure>
 
 <h3>3. Python binding <img src="/images/python.png" height="24" width="24"></h3>
 
-<p>The Python binding depends on <em>the core</em>, so make sure to <em>install the core before</em> you can use this binding.</p>
+<p>The easiest way to install Python binding is via <em>pip</em>, where packages for all the Operating Systems, including Windows, are provided.
+Simply run the below command from prompt (you need sudo on Linux, MacOS for root access).</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>pip install unicorn</code></pre></figure>
+
+<p>If you want to install from source, note that Python binding depends on <em>the core</em>, so make sure to <em>install the core before</em> you can use this binding.</p>
 
 <p>On *nix platforms, do:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>bindings/python
-<span class="nv">$ </span>sudo make install</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ <span class="nb">cd</span> bindings/python
+$ sudo make install</code></pre></figure>
 
 <p>On Windows, do:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>bindings/python
-python setup.py install</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> bindings/python
+python setup.py install</code></pre></figure>
 
 <p>For Windows, after above steps, you need to copy all the <em>DLL files</em> from the <em>Windows core engine</em> in the <a href="/download">Download</a> section into directory *C:\location<em>to</em>python\Lib\site-packages\unicorn*.</p>
 
