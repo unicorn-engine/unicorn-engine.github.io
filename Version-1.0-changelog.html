@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Version history – Unicorn – The ultimate CPU emulator</title>
+    <title>1.0 – Unicorn – The ultimate CPU emulator</title>
 
         <meta name="go-import" content="unicorn-engine.org git https://github.com/unicorn-engine/unicorn/bindings/go/unicorn">
     <meta charset="utf-8" />
@@ -10,14 +10,78 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="The ultimate CPU emulator">
-    <meta property="og:description" content="The ultimate CPU emulator" />
+    <meta name="description" content="
+Lots of bugfixes in all architectures.
+Fix many memory leaking issues.
+New APIs: uc_query, uc_reg_write_batch, uc_reg_read_batch, uc_mem_map_ptr, uc_mem_regions, uc_free, uc_context_alloc, uc_context_save &amp; uc_context_restore.
+New memory hook type: UC_HOOK_MEM_READ_AFTER.
+Add new version macros UC_VERSION_MAJOR, UC_VERSION_MINOR, UC_VERSION_EXTRA.
+Remove glib &amp; pkconfig dependency.
+ARM: support MCLASS cpu (Cortex-M3).
+Windows: export a static lib that can be used outside of Mingw.
+ARM:
+
+
+Better support for Thumb mode.
+uc_reg_write now can modify CPSR register.
+Add some ARM coproc registers.
+ARM64: uc_reg_read &amp; uc_reg_write now handles W0-W31 registers.
+X86:
+
+
+Fix 16bit address computation.
+Fix initial state of segment registers.
+
+
+Windows: fix a double free bug in uc_close.
+3 new bindings: Haskell, MSVC, VB6.
+Python:
+
+
+Better support for Python3
+Fix memory leaking that prevents UC instances from being GC.
+
+
+" />
+    <meta property="og:description" content="
+Lots of bugfixes in all architectures.
+Fix many memory leaking issues.
+New APIs: uc_query, uc_reg_write_batch, uc_reg_read_batch, uc_mem_map_ptr, uc_mem_regions, uc_free, uc_context_alloc, uc_context_save &amp; uc_context_restore.
+New memory hook type: UC_HOOK_MEM_READ_AFTER.
+Add new version macros UC_VERSION_MAJOR, UC_VERSION_MINOR, UC_VERSION_EXTRA.
+Remove glib &amp; pkconfig dependency.
+ARM: support MCLASS cpu (Cortex-M3).
+Windows: export a static lib that can be used outside of Mingw.
+ARM:
+
+
+Better support for Thumb mode.
+uc_reg_write now can modify CPSR register.
+Add some ARM coproc registers.
+ARM64: uc_reg_read &amp; uc_reg_write now handles W0-W31 registers.
+X86:
+
+
+Fix 16bit address computation.
+Fix initial state of segment registers.
+
+
+Windows: fix a double free bug in uc_close.
+3 new bindings: Haskell, MSVC, VB6.
+Python:
+
+
+Better support for Python3
+Fix memory leaking that prevents UC instances from being GC.
+
+
+" />
     
     <meta name="author" content="Unicorn" />
 
     
-    <meta property="og:title" content="Version history" />
-    <meta property="twitter:title" content="Version history" />
+    <meta property="og:title" content="1.0" />
+    <meta property="twitter:title" content="1.0" />
     
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -71,19 +135,16 @@
     </div>
 
     <div id="main" role="main" class="container">
-      <h2>Version history</h2>
+      <article class="post">
+  <h2>1.0</h2>
 
-<hr>
+  <div class="date">
+    February 23, 2017
+  </div>
 
-<article>
-<a href="/Version-1.0-changelog">
-<h3>Version 1.0</h3>
-</a>
-<div class="date">
-February 23, 2017
-</div>
 
-<ul>
+  <div class="entry">
+    <ul>
 <li>Lots of bugfixes in all architectures.</li>
 <li>Fix many memory leaking issues.</li>
 <li>New APIs: <em>uc_query</em>, <em>uc_reg_write_batch</em>, <em>uc_reg_read_batch</em>, <em>uc_mem_map_ptr</em>, <em>uc_mem_regions</em>, <em>uc_free</em>, <em>uc_context_alloc</em>, <em>uc_context_save</em> &amp; <em>uc_context_restore</em>.</li>
@@ -116,22 +177,9 @@ February 23, 2017
 </ul></li>
 </ul>
 
-</article>
+  </div>
 
-<hr>
-
-<article>
-<a href="/Version-0.9-changelog">
-<h3>Version 0.9</h3>
-</a>
-<div class="date">
-October 15, 2015
-</div>
-
-<ul>
-<li>First public release.</li>
-</ul>
-
+  
 </article>
 
     </div>

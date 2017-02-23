@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Download – Unicorn – The ultimate CPU emulator</title>
+    <title>Version 1.0 – Unicorn – The ultimate CPU emulator</title>
 
         <meta name="go-import" content="unicorn-engine.org git https://github.com/unicorn-engine/unicorn/bindings/go/unicorn">
     <meta charset="utf-8" />
@@ -10,14 +10,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="The ultimate CPU emulator">
-    <meta property="og:description" content="The ultimate CPU emulator" />
+    <meta name="description" content="We are very happy to announce version 1.0 of Unicorn Engine!
+" />
+    <meta property="og:description" content="We are very happy to announce version 1.0 of Unicorn Engine!
+" />
     
     <meta name="author" content="Unicorn" />
 
     
-    <meta property="og:title" content="Download" />
-    <meta property="twitter:title" content="Download" />
+    <meta property="og:title" content="Version 1.0" />
+    <meta property="twitter:title" content="Version 1.0" />
     
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -71,75 +73,63 @@
     </div>
 
     <div id="main" role="main" class="container">
-      <article class="page">
+      <article class="post">
+  <h2>Version 1.0</h2>
 
-  <h2>Download</h2>
   <div class="date">
-    
+    February 23, 2017
   </div>
 
 
   <div class="entry">
-    <p>The current version is <strong>1.0</strong>, which was released on <time datetime="2017-02-23"> February 23, 2017</time>.</p>
+    <p>We are very happy to announce version 1.0 of Unicorn Engine!</p>
 
-<p>See the <a href="/changelog/">version history</a> for a list of changes.</p>
+<p>The source code &amp; precompiled binaries are available in the <a href="/download/">download</a> section. See <a href="/docs/">documentation</a> for how to compile and install Unicorn.</p>
 
-<hr>
+<p>A quick tutorial on how to program with Unicorn in C &amp; Python can be found <a href="http://www.unicorn-engine.org/docs/tutorial.html">here</a>.</p>
 
-<h3>Git repository <img src="/images/octocat.jpg" height="32" width="32"></h3>
-
-<p>The latest version of the source code can be retrieved at our <a href="https://github.com/unicorn-engine/unicorn">Git repository</a>.</p>
-
-<hr>
-
-<h3>Source archive <img src="/images/tgz.png" height="28" width="28"> <img src="/images/zip.png" height="32" width="32"></h3>
-
-<p><a class="download" href="https://github.com/unicorn-engine/unicorn/archive/1.0.zip" title="Download source (ZIP)">.ZIP</a></p>
-
-<p>This package contains:</p>
+<p>Important changes since v0.9 include:</p>
 
 <ul>
-<li>The complete source code for the Unicorn framework.</li>
-<li>Bindings for Python, Java, Go, &amp; .NET.</li>
-<li>A collection of sample programs.</li>
-</ul>
-
-<p>This is the recommended version for all platforms.</p>
-
-<p><a class="download" href="https://github.com/unicorn-engine/unicorn/archive/1.0.tar.gz" title="Download source (TGZ)">.TGZ</a></p>
-
-<hr>
-
-<h3>Community bindings <img src="/images/binder.png" height="24" width="24"></h3>
-
-<p>Besides Haskell, Ruby, Python, Java, Go, .NET &amp; MSVC supported in the main code, some bindings for other languages are created and maintained by the community.</p>
+<li>Lots of bugfixes in all architectures.</li>
+<li>Fix many memory leaking issues.</li>
+<li>New APIs: <em>uc_query</em>, <em>uc_reg_write_batch</em>, <em>uc_reg_read_batch</em>, <em>uc_mem_map_ptr</em>, <em>uc_mem_regions</em>, <em>uc_free</em>, <em>uc_context_alloc</em>, <em>uc_context_save</em> &amp; <em>uc_context_restore</em>.</li>
+<li>New memory hook type: <em>UC_HOOK_MEM_READ_AFTER</em>.</li>
+<li>Add new version macros <em>UC_VERSION_MAJOR</em>, <em>UC_VERSION_MINOR</em>, <em>UC_VERSION_EXTRA</em>.</li>
+<li>Remove glib &amp; pkconfig dependency.</li>
+<li>ARM: support MCLASS cpu (Cortex-M3).</li>
+<li>Windows: export a static lib that can be used outside of Mingw.</li>
+<li>ARM:
 
 <ul>
-<li><a href="https://github.com/stievie/UnicornPascal">UnicornPascal</a>: Delphi/Free Pascal binding (by Stievie).</li>
-<li><a href="https://github.com/ekse/unicorn-rs">Unicorn-Rs</a>: Rust binding (by Sébastien Duquette)</li>
-<li><a href="https://metacpan.org/pod/UnicornEngine">UnicornEngine</a>: Perl binding (by Vikas Naresh Kumar)</li>
-</ul>
-
-<hr>
-
-<h3>Windows - Core engine <img src="/images/windows.png" height="28" width="28"></h3>
-
-<p><a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/1.0/unicorn-1.0-win32.zip" title="Download Win32 Binaries (ZIP)">Win-32</a></p>
-
-<p>NOTE: This is necessary for all bindings (except Python) &amp; also for C programming.</p>
-
-<p>This package contains:</p>
+<li>Better support for Thumb mode.</li>
+<li><em>uc_reg_write</em> now can modify CPSR register.</li>
+<li>Add some ARM coproc registers.</li>
+<li>ARM64: <em>uc_reg_read</em> &amp; <em>uc_reg_write</em> now handles W0-W31 registers.</li>
+<li>X86:
 
 <ul>
-<li>README &amp; license file.</li>
-<li>The Unicorn header files (*.h) for C programming.</li>
-<li>32-bit/64-bit DLLs &amp; static libraries for Microsoft Windows 32-bit/64-bit.</li>
-<li>A sample file (sample_x86.exe)</li>
+<li>Fix 16bit address computation.</li>
+<li>Fix initial state of segment registers.</li>
+</ul></li>
+</ul></li>
+<li>Windows: fix a double free bug in <em>uc_close</em>.</li>
+<li>3 new bindings: Haskell, MSVC, VB6.</li>
+<li>Python:
+
+<ul>
+<li>Better support for Python3</li>
+<li>Fix memory leaking that prevents UC instances from being GC.</li>
+</ul></li>
 </ul>
 
-<p><a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/1.0/unicorn-1.0-win64.zip" title="Download Win64 Binaries (ZIP)">Win-64</a></p>
+<p>Community also provide independent bindings for <a href="https://github.com/stievie/UnicornPascal">Pascal</a>, <a href="https://github.com/ekse/unicorn-rs">Rust</a> &amp; <a href="https://metacpan.org/pod/UnicornEngine">Perl</a>.</p>
+
+<p>Huge thanks to all the heroic contributors who worked hard for over 1 year to make this release possible!</p>
 
   </div>
+
+  
 </article>
 
     </div>

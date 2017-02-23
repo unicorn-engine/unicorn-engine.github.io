@@ -78,7 +78,7 @@ Highlight features:
 
 <li>Clean/simple/lightweight/intuitive architecture-neutral API.</li>
 
-<li>Implemented in pure C language, with bindings for Visual Basic, Perl, Rust, Haskell, Ruby, Python, Java, Go, .NET, Delphi/Pascal & MSVC available.</li>
+<li>Implemented in pure C language, with bindings for Rust, Haskell, Ruby, Python, Java, Go, .NET, Delphi/Pascal & MSVC available.</li>
 
 <li>Native support for Windows & *nix (with Mac OSX, Linux, *BSD & Solaris confirmed).</li>
 
@@ -100,6 +100,63 @@ Unicorn is based on <a href="http://www.qemu.org">QEMU</a>, but it goes much fur
 
 <hr>
 <div class="posts">
+  
+    <article class="post">
+
+      <h2><a href="/Version-1.0">Version 1.0</a></h2>
+
+      <div class="date">
+      February 23, 2017
+      </div>
+
+      <div class="entry">
+        <p>We are very happy to announce version 1.0 of Unicorn Engine!</p>
+
+<p>The source code &amp; precompiled binaries are available in the <a href="/download/">download</a> section. See <a href="/docs/">documentation</a> for how to compile and install Unicorn.</p>
+
+<p>A quick tutorial on how to program with Unicorn in C &amp; Python can be found <a href="http://www.unicorn-engine.org/docs/tutorial.html">here</a>.</p>
+
+<p>Important changes since v0.9 include:</p>
+
+<ul>
+<li>Lots of bugfixes in all architectures.</li>
+<li>Fix many memory leaking issues.</li>
+<li>New APIs: <em>uc_query</em>, <em>uc_reg_write_batch</em>, <em>uc_reg_read_batch</em>, <em>uc_mem_map_ptr</em>, <em>uc_mem_regions</em>, <em>uc_free</em>, <em>uc_context_alloc</em>, <em>uc_context_save</em> &amp; <em>uc_context_restore</em>.</li>
+<li>New memory hook type: <em>UC_HOOK_MEM_READ_AFTER</em>.</li>
+<li>Add new version macros <em>UC_VERSION_MAJOR</em>, <em>UC_VERSION_MINOR</em>, <em>UC_VERSION_EXTRA</em>.</li>
+<li>Remove glib &amp; pkconfig dependency.</li>
+<li>ARM: support MCLASS cpu (Cortex-M3).</li>
+<li>Windows: export a static lib that can be used outside of Mingw.</li>
+<li>ARM:
+
+<ul>
+<li>Better support for Thumb mode.</li>
+<li><em>uc_reg_write</em> now can modify CPSR register.</li>
+<li>Add some ARM coproc registers.</li>
+<li>ARM64: <em>uc_reg_read</em> &amp; <em>uc_reg_write</em> now handles W0-W31 registers.</li>
+<li>X86:
+
+<ul>
+<li>Fix 16bit address computation.</li>
+<li>Fix initial state of segment registers.</li>
+</ul></li>
+</ul></li>
+<li>Windows: fix a double free bug in <em>uc_close</em>.</li>
+<li>3 new bindings: Haskell, MSVC, VB6.</li>
+<li>Python:
+
+<ul>
+<li>Better support for Python3</li>
+<li>Fix memory leaking that prevents UC instances from being GC.</li>
+</ul></li>
+</ul>
+
+<p>Community also provide independent bindings for <a href="https://github.com/stievie/UnicornPascal">Pascal</a>, <a href="https://github.com/ekse/unicorn-rs">Rust</a> &amp; <a href="https://metacpan.org/pod/UnicornEngine">Perl</a>.</p>
+
+<p>Huge thanks to all the heroic contributors who worked hard for over 1 year to make this release possible!</p>
+
+      </div>
+    </article>
   
     <article class="post">
 
