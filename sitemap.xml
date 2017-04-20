@@ -1,57 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/Version-0.9-changelog</loc>
-    <lastmod>2015-10-15T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/Version-0.9</loc>
-    <lastmod>2015-10-15T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/beta-start</loc>
-    <lastmod>2015-09-01T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/beta</loc>
-    <lastmod>2015-08-07T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/blackhat2015</loc>
-    <lastmod>2015-08-02T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/launch</loc>
-    <lastmod>2015-08-01T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/contact/</loc>
-  </url>
-  <url>
-    <loc>/docs/beyond_qemu.html</loc>
-  </url>
-  <url>
-    <loc>/changelog/</loc>
-  </url>
-  <url>
-    <loc>/docs/</loc>
-  </url>
-  <url>
-    <loc>/download/</loc>
-  </url>
-  <url>
-    <loc>/download/</loc>
-  </url>
-  <url>
-    <loc>/</loc>
-  </url>
-  <url>
-    <loc>/showcase/</loc>
-  </url>
-  <url>
-    <loc>/docs/tutorial.html</loc>
-  </url>
+<url>
+<loc>http://localhost:4000/launch</loc>
+<lastmod>2015-08-01T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blackhat2015</loc>
+<lastmod>2015-08-02T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/beta</loc>
+<lastmod>2015-08-07T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/beta-start</loc>
+<lastmod>2015-09-01T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-0.9-changelog</loc>
+<lastmod>2015-10-15T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-0.9</loc>
+<lastmod>2015-10-15T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-1.0-changelog</loc>
+<lastmod>2017-02-23T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-1.0</loc>
+<lastmod>2017-02-23T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-1.0.1-changelog</loc>
+<lastmod>2017-04-20T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Version-1.0.1</loc>
+<lastmod>2017-04-20T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/404</loc>
+</url>
+<url>
+<loc>http://localhost:4000/contact/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/beyond_qemu</loc>
+</url>
+<url>
+<loc>http://localhost:4000/changelog/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/download/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/showcase/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/BHUSA2015-unicorn.pdf</loc>
+<lastmod>2017-02-23T21:14:30+08:00</lastmod>
+</url>
 </urlset>
