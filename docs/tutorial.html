@@ -9,16 +9,16 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    
+
     <meta name="description" content="The ultimate CPU emulator">
     <meta property="og:description" content="The ultimate CPU emulator" />
-    
+
     <meta name="author" content="Unicorn" />
 
-    
+
     <meta property="og:title" content="Programming with C & Python languages" />
     <meta property="twitter:title" content="Programming with C & Python languages" />
-    
+
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -79,76 +79,12 @@
 
 <h3>1. Tutorial for C language</h3>
 
-<p>The following sample code presents how to emulate 32-bit code of X86 in C language.</p>
+<p>The following sample code presents how to emulate 32-bit code of X86 in C language and <em>Makefile</em>.</p>
 
-<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;unicorn/unicorn.h&gt;</span>
-<span class="lineno"> 2</span> 
-<span class="lineno"> 3</span> <span class="c1">// code to be emulated</span>
-<span class="lineno"> 4</span> <span class="cp">#define X86_CODE32 &quot;\x41\x4a&quot; </span><span class="c1">// INC ecx; DEC edx</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="c1">// memory address where emulation starts</span>
-<span class="lineno"> 7</span> <span class="cp">#define ADDRESS 0x1000000</span>
-<span class="lineno"> 8</span> 
-<span class="lineno"> 9</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span>
-<span class="lineno">10</span> <span class="p">{</span>
-<span class="lineno">11</span>   <span class="n">uc_engine</span> <span class="o">*</span><span class="n">uc</span><span class="p">;</span>
-<span class="lineno">12</span>   <span class="n">uc_err</span> <span class="n">err</span><span class="p">;</span>
-<span class="lineno">13</span>   <span class="kt">int</span> <span class="n">r_ecx</span> <span class="o">=</span> <span class="mh">0x1234</span><span class="p">;</span>     <span class="c1">// ECX register</span>
-<span class="lineno">14</span>   <span class="kt">int</span> <span class="n">r_edx</span> <span class="o">=</span> <span class="mh">0x7890</span><span class="p">;</span>     <span class="c1">// EDX register</span>
-<span class="lineno">15</span> 
-<span class="lineno">16</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Emulate i386 code</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="lineno">17</span> 
-<span class="lineno">18</span>   <span class="c1">// Initialize emulator in X86-32bit mode</span>
-<span class="lineno">19</span>   <span class="n">err</span> <span class="o">=</span> <span class="n">uc_open</span><span class="p">(</span><span class="n">UC_ARCH_X86</span><span class="p">,</span> <span class="n">UC_MODE_32</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">uc</span><span class="p">);</span>
-<span class="lineno">20</span>   <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="n">UC_ERR_OK</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">21</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed on uc_open() with error returned: %u</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
-<span class="lineno">22</span>     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="lineno">23</span>   <span class="p">}</span>
-<span class="lineno">24</span> 
-<span class="lineno">25</span>   <span class="c1">// map 2MB memory for this emulation</span>
-<span class="lineno">26</span>   <span class="n">uc_mem_map</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="n">UC_PROT_ALL</span><span class="p">);</span>
-<span class="lineno">27</span> 
-<span class="lineno">28</span>   <span class="c1">// write machine code to be emulated to memory</span>
-<span class="lineno">29</span>   <span class="k">if</span> <span class="p">(</span><span class="n">uc_mem_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="n">X86_CODE32</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
-<span class="lineno">30</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to write emulation code to memory, quit!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="lineno">31</span>     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="lineno">32</span>   <span class="p">}</span>
-<span class="lineno">33</span> 
-<span class="lineno">34</span>   <span class="c1">// initialize machine registers</span>
-<span class="lineno">35</span>   <span class="n">uc_reg_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_ecx</span><span class="p">);</span>
-<span class="lineno">36</span>   <span class="n">uc_reg_write</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_edx</span><span class="p">);</span>
-<span class="lineno">37</span> 
-<span class="lineno">38</span>   <span class="c1">// emulate code in infinite time &amp; unlimited instructions</span>
-<span class="lineno">39</span>   <span class="n">err</span><span class="o">=</span><span class="n">uc_emu_start</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">ADDRESS</span><span class="p">,</span> <span class="n">ADDRESS</span> <span class="o">+</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="lineno">40</span>   <span class="k">if</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">41</span>     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed on uc_emu_start() with error returned %u: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-<span class="lineno">42</span>       <span class="n">err</span><span class="p">,</span> <span class="n">uc_strerror</span><span class="p">(</span><span class="n">err</span><span class="p">));</span>
-<span class="lineno">43</span>   <span class="p">}</span>
-<span class="lineno">44</span> 
-<span class="lineno">45</span>   <span class="c1">// now print out some registers</span>
-<span class="lineno">46</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Emulation done. Below is the CPU context</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="lineno">47</span> 
-<span class="lineno">48</span>   <span class="n">uc_reg_read</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_ecx</span><span class="p">);</span>
-<span class="lineno">49</span>   <span class="n">uc_reg_read</span><span class="p">(</span><span class="n">uc</span><span class="p">,</span> <span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r_edx</span><span class="p">);</span>
-<span class="lineno">50</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; ECX = 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">r_ecx</span><span class="p">);</span>
-<span class="lineno">51</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; EDX = 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">r_edx</span><span class="p">);</span>
-<span class="lineno">52</span> 
-<span class="lineno">53</span>   <span class="n">uc_close</span><span class="p">(</span><span class="n">uc</span><span class="p">);</span>
-<span class="lineno">54</span> 
-<span class="lineno">55</span>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="lineno">56</span> <span class="p">}</span></code></pre></div>
+<script src="https://gist.github.com/lzutao/1e36b7c7f40fa1d4e53605495b0bb1e4.js"></script>
 
 <p><br>
-To compile this file, we need a <em>Makefile</em> like below.</p>
-
-<div class="highlight"><pre><code class="language-makefile" data-lang="makefile"><span class="nv">LDFLAGS</span> <span class="o">+=</span> <span class="k">$(</span>shell pkg-config --libs glib-2.0<span class="k">)</span> -lpthread -lm -lunicorn
-
-<span class="nf">all</span><span class="o">:</span> <span class="n">test</span>
-<span class="nf">%</span><span class="o">:</span> %.<span class="n">c</span>
-    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="nv">$^</span> <span class="k">$(</span>LDFLAGS<span class="k">)</span> -o <span class="nv">$@</span></code></pre></div>
-
-<p><br>
-Readers can get this sample code in this <a href="/samples/test1.tgz">tarball file</a>. Compile and run it as follows (demonstrated on Mac OS X).</p>
+Compile and run it as follows (demonstrated on Mac OS X).</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>make
 cc  test1.c -L/usr/local/Cellar/glib/2.44.1/lib -L/usr/local/opt/gettext/lib -lglib-2.0 -lintl  -lpthread -lm -lunicorn -o test1
@@ -184,44 +120,7 @@ The C sample is intuitive, but just in case, readers can find below the explanat
 
 <p>The following code presents the same example as above, but in Python, to emulate 32-bit code of X86.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="lineno"> 2</span> <span class="kn">from</span> <span class="nn">unicorn</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">unicorn.x86_const</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="lineno"> 4</span> 
-<span class="lineno"> 5</span> <span class="c"># code to be emulated</span>
-<span class="lineno"> 6</span> <span class="n">X86_CODE32</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;</span><span class="se">\x41\x4a</span><span class="s">&quot;</span> <span class="c"># INC ecx; DEC edx</span>
-<span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="c"># memory address where emulation starts</span>
-<span class="lineno"> 9</span> <span class="n">ADDRESS</span> <span class="o">=</span> <span class="mh">0x1000000</span>
-<span class="lineno">10</span> 
-<span class="lineno">11</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Emulate i386 code&quot;</span><span class="p">)</span>
-<span class="lineno">12</span> <span class="k">try</span><span class="p">:</span>
-<span class="lineno">13</span>     <span class="c"># Initialize emulator in X86-32bit mode</span>
-<span class="lineno">14</span>     <span class="n">mu</span> <span class="o">=</span> <span class="n">Uc</span><span class="p">(</span><span class="n">UC_ARCH_X86</span><span class="p">,</span> <span class="n">UC_MODE_32</span><span class="p">)</span>
-<span class="lineno">15</span> 
-<span class="lineno">16</span>     <span class="c"># map 2MB memory for this emulation</span>
-<span class="lineno">17</span>     <span class="n">mu</span><span class="o">.</span><span class="n">mem_map</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
-<span class="lineno">18</span> 
-<span class="lineno">19</span>     <span class="c"># write machine code to be emulated to memory</span>
-<span class="lineno">20</span>     <span class="n">mu</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="n">X86_CODE32</span><span class="p">)</span>
-<span class="lineno">21</span> 
-<span class="lineno">22</span>     <span class="c"># initialize machine registers</span>
-<span class="lineno">23</span>     <span class="n">mu</span><span class="o">.</span><span class="n">reg_write</span><span class="p">(</span><span class="n">UC_X86_REG_ECX</span><span class="p">,</span> <span class="mh">0x1234</span><span class="p">)</span>
-<span class="lineno">24</span>     <span class="n">mu</span><span class="o">.</span><span class="n">reg_write</span><span class="p">(</span><span class="n">UC_X86_REG_EDX</span><span class="p">,</span> <span class="mh">0x7890</span><span class="p">)</span>
-<span class="lineno">25</span> 
-<span class="lineno">26</span>     <span class="c"># emulate code in infinite time &amp; unlimited instructions</span>
-<span class="lineno">27</span>     <span class="n">mu</span><span class="o">.</span><span class="n">emu_start</span><span class="p">(</span><span class="n">ADDRESS</span><span class="p">,</span> <span class="n">ADDRESS</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">X86_CODE32</span><span class="p">))</span>
-<span class="lineno">28</span> 
-<span class="lineno">29</span>     <span class="c"># now print out some registers</span>
-<span class="lineno">30</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Emulation done. Below is the CPU context&quot;</span><span class="p">)</span>
-<span class="lineno">31</span> 
-<span class="lineno">32</span>     <span class="n">r_ecx</span> <span class="o">=</span> <span class="n">mu</span><span class="o">.</span><span class="n">reg_read</span><span class="p">(</span><span class="n">UC_X86_REG_ECX</span><span class="p">)</span>
-<span class="lineno">33</span>     <span class="n">r_edx</span> <span class="o">=</span> <span class="n">mu</span><span class="o">.</span><span class="n">reg_read</span><span class="p">(</span><span class="n">UC_X86_REG_EDX</span><span class="p">)</span>
-<span class="lineno">34</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; ECX = 0x</span><span class="si">%x</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">r_ecx</span><span class="p">)</span>
-<span class="lineno">35</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; EDX = 0x</span><span class="si">%x</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">r_edx</span><span class="p">)</span>
-<span class="lineno">36</span> 
-<span class="lineno">37</span> <span class="k">except</span> <span class="n">UcError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="lineno">38</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;ERROR: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span></code></pre></div>
+<script src="https://gist.github.com/lzutao/e66f618b6c88b102682598c4bfaecb0f.js"></script>
 
 <p><br>
 Readers can get this sample code <a href="/samples/test1.py">here</a>. Run it with Python as follows.</p>
@@ -266,7 +165,7 @@ The Python sample is intuitive, but just in case, readers can find below the exp
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          
+
 <a href="mailto:unicorn.emu@gmail.com"><i class="svg-icon email"></i></a>
 
 
@@ -283,7 +182,7 @@ The Python sample is intuitive, but just in case, readers can find below the exp
       </div>
     </div>
 
-    
+
 
   </body>
 </html>
