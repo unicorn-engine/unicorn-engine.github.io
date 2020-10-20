@@ -1,0 +1,143 @@
+---
+layout: default
+title: Showcases
+permalink: /showcase/
+---
+
+## Showcase
+
+In our knowledge, Unicorn has been used by **122** following products (listed in no particular order).
+
+- [Qiling](https://qiling.io): Cross-platform & multi-architecture lightweight sandbox.
+- [UniDOS](https://github.com/aquynh/unidos): Microsoft DOS emulator.
+- [Radare2](https://github.com/radare/radare2): Unix-like reverse engineering framework and commandline tools.
+- [Usercorn](https://github.com/lunixbochs/usercorn): User-space system emulator.
+- [Unicorn-decoder](https://github.com/mothran/unicorn-decoder): A shellcode decoder that can dump self-modifying-code.
+- [Univm](https://github.com/univm/univm): A plugin for x64dbg for x86 emulation.
+- [PyAna](https://github.com/PyAna/PyAna): Analyzing Windows shellcode.
+- [GEF](https://github.com/hugsy/gef): GDB Enhanced Features.
+- [Pwndbg](https://github.com/zachriggle/pwndbg): A Python plugin of GDB to assist exploit development.
+- [Eli.Decode](https://github.com/DeveloppSoft/Eli.Decode): Decode obfuscated shellcodes.
+- [IdaEmu](https://github.com/36hours/idaemu): an IDA Pro Plugin for code emulation.
+- [Roper](https://github.com/oblivia-simplex/roper): build ROP-chain attacks on a target binary using genetic algorithms.
+- [Sk3wlDbg](https://github.com/cseagle/sk3wldbg): A plugin for IDA Pro for machine code emulation.
+- [Angr](http://angr.re): A framework for static &amp; dynamic concolic (symbolic) analysis.
+- [Cemu](https://github.com/hugsy/cemu): Cheap EMUlator based on Keystone and Unicorn engines.
+- [ROPMEMU](https://github.com/vrtadmin/ROPMEMU): Analyze ROP-based exploitation.
+- [BroIDS_Unicorn](https://github.com/Mipu94/BroIDS_Unicorn): Plugin to detect shellcode on Bro IDS with Unicorn.
+- [UniAna](https://github.com/dungtv543/Dutas): Analysis PE file or Shellcode (Only Windows x86).
+- [ARMSCGen](https://github.com/alexpark07/ARMSCGen): ARM Shellcode Generator.
+- [TinyAntivirus](https://github.com/develbranch/TinyAntivirus): Open source Antivirus engine designed for detecting &amp; disinfecting polymorphic virus.
+- [Patchkit](https://github.com/lunixbochs/patchkit): A powerful binary patching toolkit.
+- [Arpilnik](https://github.com/rdbv/arpilnik): Very simple arithmetric expression compiler for x86_64 machines.
+- [Shellbug](https://github.com/karttoon/shellbug): Basic command-line, text-based, shellcode debugger.
+- [GCTF-Challenges](https://github.com/DISMGryphon/GCTF-Challenges/tree/master/challs/programming/forest): An assembly based puzzle at GryphonCTF 2016.
+- [Sibyl](https://github.com/cea-sec/Sibyl): A Miasm2 based function divination.
+- [Kadabra](https://github.com/mrphrazer/kadabra): A blanked execution framework.
+- [Fuzzemu](https://github.com/cojocar/fuzzemu): Instruction emulator for the Cortex-M3 ARM.
+- [Simuvex](https://github.com/angr/simuvex): Symbolic execution engine for the VEX IR.
+- [VulcanoIO](http://vulcanoio.org): Open Source Cluster IOTs for Reverse Engineering Malware.
+- [Nao](https://github.com/tkmru/nao): Dead code eliminator plugin for IDA Pro.
+- [Ripr](https://github.com/pbiernat/ripr): Rip out functionality from binary code to use from Python.
+- [Unicorn.Js](https://alexaltea.github.io/unicorn.js/): A port of the Unicorn emulator for JavaScript.
+- [SECCON2016 CTF](https://github.com/SECCON/SECCON2016_online_CTF): Online CTF game (Crypto 200, Lost Description).
+- [Pwntools](https://github.com/Gallopsled/pwntools): CTF framework and exploit development library.
+- [Indika](https://github.com/eqv/indika): A blanket execution/min hash semantic hash tool for binary function identification.
+- [Pogom-updated](https://github.com/PokeHunterProject/pogom-updated): The fastest Pokémon Go map available.
+- [x86-64-pe-emu](https://github.com/asamy/x86-64-pe-emu): AMD64 Windows PE Emulator in Python.
+- [cgPwn](https://github.com/0xM3R/cgPwn): Cyber Grand Pwnage Box.
+- [unitracer](https://github.com/icchy/unitracer): Windows API tracer for malware.
+- [Asrepl](https://github.com/enferex/asrepl): x86-64 assembly REPL.
+- [unicorn-libemu-shim](https://github.com/fireeye/unicorn-libemu-shim): libemu shim layer and win32 environment for Unicorn Engine.
+- [UniversalRop](https://github.com/kokjo/universalrop): Small tool for generating ropchains using Unicorn and Z3.
+- [Manticore](https://github.com/trailofbits/manticore): Dynamic binary analysis tool.
+- [PrimeU](https://github.com/Gigi1237/PrimeU): Emulator for the HP Prime calculator.
+- [JSRT](https://github.com/tinysec/jsrt): Javascript Runtime for Windows, based on Chakra.
+- [Cuckoo](https://github.com/cuckoosandbox/cuckoo): Automated dynamic malware analysis system.
+- [AroeA](https://bitbucket.org/snippets/Alexander_Hanel/AroeA): IDA script to extract stack strings + simple deobfuscate.
+- [Unico](https://github.com/inaz2/Unico): Unicorn PE function runner.
+- [Pegasus](https://github.com/0a777h/pegasus): Windbg emulation plugin.
+- [AsmShell](https://github.com/poppycompass/asmshell): Command Line Assembler Shell.
+- [uEmu](https://github.com/alexhude/uEmu): Tiny cute emulator plugin for IDA based on Unicorn.
+- [CageTheUnicorn](https://github.com/reswitched/CageTheUnicorn): Debugging/emulating environment for Switch code.
+- [Asemu](https://github.com/Rewzilla/asemu/): 32-bit x86 emulator using ncurses and Capstone/Keystone/Unicorn.
+- [CircuitBreaker](https://github.com/misson20000/CircuitBreaker): Nintendo Switch hacking toolkit.
+- [ROPChain](https://github.com/kriw/ropchain): ROPChain generator.
+- [AFL-Unicorn](https://github.com/njv299/afl-unicorn): Fuzz any piece of binary.
+- [rengage](https://github.com/JaCzekanski/rengage): Nokia N-Gage reverse engineering platform/emulator.
+- [openswe1r](https://github.com/OpenSWE1R/openswe1r): An Open-Source port of the 1999 Game 'Star Wars: Episode 1 Racer'.
+- [Syntia](https://github.com/rub-sysSec/syntia): Synthesizing the Semantics of Obfuscated Code.
+- [uDdbg](https://github.com/iGio90/uDdbg): A GDB like debugger that provide a runtime env to Unicorn emulator and additionals features.
+- [Vita3K](https://github.com/Vita3K/Vita3K): PlayStation Vita emulator.
+- [JuniEmu](https://github.com/arkup/juniEmu): Emulator interface for ARM 32bit.
+- [Yuzu](https://yuzu-emu.org): Open-source emulator for the Nintendo Switch.
+- [Dynarmic](https://github.com/MerryMage/dynarmic): An ARM dynamic recompiler.
+- [Fygimbal](https://github.com/scanlime/fygimbal): Tools for talking to the Feiyu Tech gimbal via serial.
+- [SlothEmu](https://github.com/blaquee/SlothEmu): Unicorn emulator for x64dbg.
+- [Dbghlpr](https://github.com/0a777h/dbghlpr): It provides various functions useful for debugging using Windbg.
+- [UniPE](https://github.com/pgarba/UniPE): A small framwork to execute PE files with UniCorn.
+- [Pimp my ride](https://github.com/smuniz/pimp_my_ride): Multi-architecture CPU Emulator.
+- [EKA2L1](https://github.com/bentokun/EKA2L1): Symbian OS emulator.
+- [Cxbx-Reloaded](https://github.com/Cxbx-Reloaded/Cxbx-Reloaded): Xbox (Original) Emulator.
+- [Vios](https://github.com/JagerDesu/vios): Experimental Playstation Vita Emulator.
+- [Fuzzle](https://github.com/JeffJerseyCow/fuzzle): A stateful fuzzing engine.
+- [EmuHookDetector](https://github.com/David-Reguera-Garcia-Dreg/emuhookdetector): Hook detector using emulation and comparing static with dynamic output.
+- [Scanr](https://github.com/1Project/Scanr): Detect x86 shellcode in files and traffic.
+- [Binja-secret](https://github.com/iGio90/binja-secret): Binary Ninja plugin that encapsulate Frida, Unicorn, Capstone and Keystone.
+- [AndroidNativeEmu](https://github.com/AeonLucid/AndroidNativeEmu): Partly emulate an Android native library.
+- [Frick](http://secret.re/frick): The first debugger built on top of Frida.
+- [Emufuzz](https://github.com/guidovranken/emufuzz): libFuzzer + Unicorn + Capstone.
+- [vtMal](https://github.com/aaaddress1/vtMal): Malware Sandbox Emulation in Python.
+- [Reil](https://github.com/google/reil): A C++ translation/emulation library for the Aarch64 instruction set to REIL.
+- [Cmulator](https://github.com/Coldzer0/Cmulator): Scriptable Reverse Engineering Sandbox Emulator for shellcode or PE binaries.
+- [unicorn_string_deobfuscator](https://github.com/gdbinit/unicorn_string_deobfuscator): A Unicorn based emulator to deobfuscate Equation Group string XOR obfuscation.
+- [Flare IDA](https://github.com/fireeye/flare-ida): IDA Pro utilities from FLARE team.
+- [Flare Emu](https://github.com/fireeye/flare-emu): Emulator for IDA Pro.
+- [ish](https://github.com/tbodt/ish): Linux shell for iOS. Uses Unicorn as a reference for testing the custom emulator.
+- [Unicorn Tracer](https://github.com/SwitchMan92/unicorn_tracer): Adds some functionalities to the Unicorn framework to ease tracing of changes in memory.
+- [Pad unpacker](https://github.com/slick1015/pad_unpacker): Puzzle and Dragons binary unpacker.
+- [Ryujinx](https://github.com/Ryujinx/Ryujinx): Experimental Switch emulator written in C#.
+- [pyGDB remote](https://github.com/SimonTheCoder/pyGDB_remote): a Python GDB remote protocol implementation.
+- [lakebed](https://github.com/misson20000/lakebed): Emulation-based testing for Nintendo Switch reimplementations.
+- [Unicorn PE](https://github.com/hzqst/unicorn_pe): Unicorn based emulator for Windows PE files.
+- [Triton](https://triton.quarkslab.com): Dynamic Binary Analysis framework.
+- [Emusca](https://github.com/jevinskie/emusca): Power trace simulator for side channel analysis attack testing.
+- [ucui-unicorn](https://github.com/eahlstrom/ucui-unicorn): ncurses shellcode/instructions tester.
+- [Dwarf](https://github.com/iGio90/Dwarf): A debugger for reverse engineers, crackers and security analyst.
+- [Un{i}packer](https://github.com/unipacker/unipacker): Automatic and platform-independent unpacker for Windows binaries.
+- [Rainbow](https://github.com/Ledger-Donjon/rainbow): Easy scripting interface to emulate embedded binaries for tracing.
+- [Unidbg](https://github.com/zhkl0228/unidbg): Emulate an Android ARM32 and/or ARM64 native library.
+- [HDD-Firmware-Emulation](https://github.com/bl4ckic3/HDD-Firmware-Emulation): Emulating SAMSUNG HM641JI HDD firmware using Unicorn.
+- [xdvre](https://github.com/xdvre/xdvre): A disassembler/debugger that works based on the extension plugin.
+- [astro](https://github.com/ausbin/astro): A safe sandbox for C autograding.
+- [ARMStrong](https://github.com/linouxis9/ARMStrong): A fast and simple ARM Simulator made for education.
+- [RopDissector](https://github.com/season-lab/ropdissector): A framework for static analysis of ROP exploits and programs.
+- [ELMO2](https://github.com/bristol-sca/ELMO2): ELMO2 is designed to help software engineers quickly identify side channel security risks during development stages.
+- [NetGuard Unpacker](https://github.com/Tanasittx/NetGuard-Unpacker-Public): Public NetGuard Deobfuscator.
+- [ipasim](https://github.com/ipasimulator/ipasim): iOS emulator for Windows.
+- [taintinduce](https://github.com/melynx/taintinduce): Automate the creation of taint propagation rules for unknown instruction sets.
+- [UnicoreFuzz](https://github.com/fgsect/unicorefuzz): Fuzzing the Kernel Using AFL-Unicorn.
+- [UniTaint](https://github.com/pgarba/UniTaint): PoC for a taint based attack on VMProtect.
+- [Lightswitch](https://github.com/Cyuubi/Lightswitch): Run Nintendo Switch homebrew and games on your Android device!
+- [unicorn-bios](https://github.com/macmade/unicorn-bios): Basic BIOS emulator for Unicorn Engine.
+- [uniFuzzer](https://github.com/rk700/uniFuzzer): A fuzzing tool for closed-source binaries based on Unicorn and LibFuzzer.
+- [Binee](https://github.com/carbonblack/binee): Binary emulation environment.
+- [Packman deobfuscator](https://github.com/archercreat/packman-deobfuscator): League-of-Legends anti-cheat code deobfuscator.
+- [aah](https://github.com/zydeco/aah): Arm64 architecture handler.
+- [tracecorn_tina](https://github.com/seth1002/tracecorn_tina): A modified version base on Tracecorn for unpacking.
+- [EFI DXE Emulator](https://github.com/gdbinit/efi_dxe_emulator): EFI DXE Emulator and Interactive Debugger.
+- [ShellCodeEmulator](https://github.com/ohjeongwook/ShellCodeEmulator): Windows shellcode emulator.
+- [x64dbgpy.library.unicorn](https://github.com/dovezp/x64dbgpy.library.unicorn): Emulator for X64dbg.
+- [Frankenstein](https://github.com/seemoo-lab/frankenstein): Broadcom and Cypress firmware emulation for fuzzing and further full-stack debugging.
+- [AFLplusplus](https://github.com/AFLplusplus/AFLplusplus): A superior fork to Google's afl - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
+
+
+---
+
+Please [let us know](/contact/), so we can put you in the list above, if you are also using Unicorn, either:
+
+- for your products.
+
+- for your training classes.
+
+- for your works.

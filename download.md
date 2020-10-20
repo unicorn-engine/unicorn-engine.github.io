@@ -1,0 +1,79 @@
+---
+layout: page
+title: Download
+permalink: /download/
+---
+
+{% for post in site.tags.changelog limit:1 %}
+
+The current version is **{{ post.title }}**, which was released on <time datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%B %e, %Y" }}</time>.
+
+See the [version history](/changelog/) for a list of changes.
+
+---
+
+### Git repository <img src="/images/octocat.jpg" height="32" width="32">
+
+The latest version of the source code can be retrieved at our [Git repository](https://github.com/unicorn-engine/unicorn).
+
+---
+
+### Source archive <img src="/images/tgz.png" height="28" width="28"> <img src="/images/zip.png" height="32" width="32">
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/archive/{{ post.title }}.zip" title="Download source (ZIP)">.ZIP</a>
+
+This package contains:
+
+- The complete source code for the Unicorn framework.
+- Bindings for Python, Java, Go, & .NET.
+- A collection of sample programs.
+
+This is the recommended version for all platforms.
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/archive/{{ post.title }}.tar.gz" title="Download source (TGZ)">.TGZ</a>
+
+---
+
+### Community bindings <img src="/images/binder.png" height="24" width="24">
+
+Besides Haskell, Ruby, Python, Java, Go, .NET & MSVC supported in the main code, some bindings for other languages are created and maintained by the community.
+
+- [UnicornPascal](https://github.com/stievie/UnicornPascal): Delphi/Free Pascal binding (by Stievie).
+- [Unicorn-Rs](https://github.com/ekse/unicorn-rs): Rust binding (by Sébastien Duquette)
+- [UnicornEngine](https://metacpan.org/pod/UnicornEngine): Perl binding (by Vikas Naresh Kumar)
+- [Unicorn-Net](https://github.com/FICTURE7/unicorn-net): .NET binding/wrapper, written in C# (by FICTURE7)
+- [Unicorn-Clj](https://github.com/williballenthin/reversing-clj/tree/master/unicorn-clj): Clojure binding (by Willi Ballenthin).
+- [pharo-unicorn](https://github.com/guillep/pharo-unicorn): Pharo binding (by Guille Polito).
+
+---
+
+### Windows - Core engine <img src="/images/windows.png" height="28" width="28">
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}-win32.zip" title="Download Win32 Binaries (ZIP)">Win-32</a>
+
+NOTE: This is necessary for all bindings (except Python) & also for C programming.
+
+This package contains:
+
+- README & license file.
+- The Unicorn header files (\*.h) for C programming.
+- 32-bit/64-bit DLLs & static libraries for Microsoft Windows 32-bit/64-bit.
+- A sample file (sample_x86.exe)
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}-win64.zip" title="Download Win64 Binaries (ZIP)">Win-64</a>
+
+---
+
+### Python module for Windows - Binaries <img src="/images/python.png" height="28" width="28"> <img src="/images/windows.png" height="28" width="28">
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}.0-python-win32.msi" title="Download Python module for Unicorn, Win32">Python-32</a>
+
+NOTE: since this installer is self-contain, no need to install the core engine above.
+
+This will install Unicorn module into your corresponding Python edition.
+
+<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}.0-python-win64.msi" title="Download Python module for Unicorn, Win64">Python-64</a>
+
+---
+
+{% endfor %}
