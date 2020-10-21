@@ -57,22 +57,45 @@ This package contains:
 
 - README & license file.
 - The Unicorn header files (\*.h) for C programming.
-- 32-bit/64-bit DLLs & static libraries for Microsoft Windows 32-bit/64-bit.
+- 32-bit/64-bit DLLs for Microsoft Windows 32-bit/64-bit.
 - A sample file (sample_x86.exe)
 
 <a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}-win64.zip" title="Download Win64 Binaries (ZIP)">Win-64</a>
 
 ---
 
-### Python module for Windows - Binaries <img src="/images/python.png" height="28" width="28"> <img src="/images/windows.png" height="28" width="28">
+### Python module for Windows/MacOS/Linux - Binaries <img src="/images/python.png" height="28" width="28"> <img src="/images/windows.png" height="28" width="28"> <img src="/images/osx.png" height="28" width="28"> <img src="/images/linux.png" height="28" width="28"> 
 
-<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}.0-python-win32.msi" title="Download Python module for Unicorn, Win32">Python-32</a>
+With `pip` or `pip3`, you can use the same command to install Python module for either Windows, MacOS or Linux.
 
-NOTE: since this installer is self-contain, no need to install the core engine above.
+{% highlight bash %}
+pip install unicorn
+{% endhighlight %}
 
-This will install Unicorn module into your corresponding Python edition.
+To upgrade from older version of Unicorn, do:
 
-<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}.0-python-win64.msi" title="Download Python module for Unicorn, Win64">Python-64</a>
+{% highlight bash %}
+pip install unicorn --upgrade
+{% endhighlight %}
+
+Remember to stick "sudo" in front for root privilege if needed.
+
+---
+
+### Brew package for MacOS - Binaries <img src="/images/homebrew.png" height="28" width="28"> <img src="/images/osx.png" height="28" width="28">
+
+Install Brew package of Unicorn on MacOS with:
+
+{% highlight bash %}
+brew install unicorn
+{% endhighlight %}
+
+To upgrade from older version of Unicorn, do:
+
+{% highlight bash %}
+brew update
+brew upgrade unicorn
+{% endhighlight %}
 
 ---
 
