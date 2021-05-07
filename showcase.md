@@ -6,7 +6,7 @@ permalink: /showcase/
 
 ## Showcase
 
-In our knowledge, Unicorn has been used by **122** following products (listed in no particular order).
+In our knowledge, Unicorn has been used by **123** following products (listed in no particular order).
 
 - [Qiling](https://qiling.io): Cross-platform & multi-architecture lightweight sandbox.
 - [UniDOS](https://github.com/aquynh/unidos): Microsoft DOS emulator.
@@ -130,7 +130,7 @@ In our knowledge, Unicorn has been used by **122** following products (listed in
 - [x64dbgpy.library.unicorn](https://github.com/dovezp/x64dbgpy.library.unicorn): Emulator for X64dbg.
 - [Frankenstein](https://github.com/seemoo-lab/frankenstein): Broadcom and Cypress firmware emulation for fuzzing and further full-stack debugging.
 - [AFLplusplus](https://github.com/AFLplusplus/AFLplusplus): A superior fork to Google's afl - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
-
+- [vmrp](https://github.com/zengming00/vmrp): Feature phone 'mrp' format software simulator
 
 ---
 
