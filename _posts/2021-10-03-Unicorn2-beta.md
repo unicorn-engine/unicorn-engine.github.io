@@ -8,7 +8,7 @@ tag: news
 <img width="350" src="images/unicorn.png">
 </p>
 
-We are very excited to announce Unicorn2 **beta** to public!
+We are very excited to announce Unicorn2 **beta** to the public!
 
 Unicorn engine was first introduced at [Blackhat USA 2015](/blackhat2015) as the only cross-platform-architecture framework for CPU emulation. After its release, Unicorn made some good impact in the security community and quickly established itself as the foundation of [various innovative work](/showcase). More than 6 years passed, it is time to make a major step forward with Unicorn2!
 
