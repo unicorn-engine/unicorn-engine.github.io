@@ -5,7 +5,7 @@ tag: news
 ---
 
 <p align="center">
-<img width="250" src="docs/unicorn-logo.png">
+<img width="250" src="images/unicorn.png">
 </p>
 
 We are very excited to announce Unicorn2 **beta** to public!
