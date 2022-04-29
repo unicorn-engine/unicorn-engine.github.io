@@ -9,6 +9,7 @@ permalink: /showcase/
 In our knowledge, Unicorn has been used by **123** following products (listed in no particular order).
 
 - [Qiling](https://qiling.io): Cross-platform & multi-architecture lightweight sandbox.
+- [udbserver](https://github.com/bet4it/udbserver): A plugin for Unicorn to provide a debug server.
 - [UniDOS](https://github.com/aquynh/unidos): Microsoft DOS emulator.
 - [Radare2](https://github.com/radare/radare2): Unix-like reverse engineering framework and commandline tools.
 - [Usercorn](https://github.com/lunixbochs/usercorn): User-space system emulator.
@@ -85,7 +86,7 @@ In our knowledge, Unicorn has been used by **123** following products (listed in
 - [Scanr](https://github.com/1Project/Scanr): Detect x86 shellcode in files and traffic.
 - [Binja-secret](https://github.com/iGio90/binja-secret): Binary Ninja plugin that encapsulate Frida, Unicorn, Capstone and Keystone.
 - [AndroidNativeEmu](https://github.com/AeonLucid/AndroidNativeEmu): Partly emulate an Android native library.
-- [Frick](http://secret.re/frick): The first debugger built on top of Frida.
+- [Frick](https://github.com/iGio90/frick): The first debugger built on top of Frida.
 - [Emufuzz](https://github.com/guidovranken/emufuzz): libFuzzer + Unicorn + Capstone.
 - [vtMal](https://github.com/aaaddress1/vtMal): Malware Sandbox Emulation in Python.
 - [Reil](https://github.com/google/reil): A C++ translation/emulation library for the Aarch64 instruction set to REIL.
@@ -127,7 +128,6 @@ In our knowledge, Unicorn has been used by **123** following products (listed in
 - [tracecorn_tina](https://github.com/seth1002/tracecorn_tina): A modified version base on Tracecorn for unpacking.
 - [EFI DXE Emulator](https://github.com/gdbinit/efi_dxe_emulator): EFI DXE Emulator and Interactive Debugger.
 - [ShellCodeEmulator](https://github.com/ohjeongwook/ShellCodeEmulator): Windows shellcode emulator.
-- [x64dbgpy.library.unicorn](https://github.com/dovezp/x64dbgpy.library.unicorn): Emulator for X64dbg.
 - [Frankenstein](https://github.com/seemoo-lab/frankenstein): Broadcom and Cypress firmware emulation for fuzzing and further full-stack debugging.
 - [AFLplusplus](https://github.com/AFLplusplus/AFLplusplus): A superior fork to Google's afl - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
 - [vmrp](https://github.com/zengming00/vmrp): Feature phone 'mrp' format software simulator
