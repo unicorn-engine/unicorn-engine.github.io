@@ -36,14 +36,16 @@ This is the recommended version for all platforms.
 
 ### Community bindings <img src="/images/binder.png" height="24" width="24">
 
-Besides Haskell, Ruby, Python, Java, Go, .NET & MSVC supported in the main code, some bindings for other languages are created and maintained by the community.
+Besides Haskell, Ruby, Python, Java, Go, Rust, Visual Basic, Pascal, .NET & MSVC supported in the main code, some bindings for other languages are created and maintained by the community.
 
-- [UnicornPascal](https://github.com/stievie/UnicornPascal): Delphi/Free Pascal binding (by Stievie).
-- [Unicorn-Rs](https://github.com/ekse/unicorn-rs): Rust binding (by Sébastien Duquette)
 - [UnicornEngine](https://metacpan.org/pod/UnicornEngine): Perl binding (by Vikas Naresh Kumar)
 - [Unicorn-Net](https://github.com/FICTURE7/unicorn-net): .NET binding/wrapper, written in C# (by FICTURE7)
-- [Unicorn-Clj](https://github.com/williballenthin/reversing-clj/tree/master/unicorn-clj): Clojure binding (by Willi Ballenthin).
-- [pharo-unicorn](https://github.com/guillep/pharo-unicorn): Pharo binding (by Guille Polito).
+- [Unicorn-Clj](https://github.com/williballenthin/reversing-clj/tree/master/unicorn-clj): Clojure binding (by Willi Ballenthin)
+- [Unicorn.CR](https://github.com/Becojo/unicorn.cr): Crystal binding (by Benoit Côté-Jodoin)
+- [Deimos/unicorn](https://github.com/D-Programming-Deimos/unicorn): D binding (by Vladimir Panteleev)
+- [Unicorn-Lua](https://github.com/dargueta/unicorn-lua): Lua binding (by Diego Argueta)
+- [pharo-unicorn](https://github.com/guillep/pharo-unicorn): Pharo binding (by Guille Polito)
+- [Unicorn.js](https://github.com/AlexAltea/unicorn.js): JavaScript binding (by Alexandro Sanchez)
 
 ---
 
