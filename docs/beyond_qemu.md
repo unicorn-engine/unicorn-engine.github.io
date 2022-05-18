@@ -19,7 +19,7 @@ The section below highlights the areas where Unicorn shines.
 
 - **Thread-safe**: QEMU cannot handle more than one CPU at the same time. In contrast, Unicorn is designed and implemented as a framework so that one program can emulate multiple code of different kinds of CPU in a moment.
 
-- **Bindings**: QEMU does not have binding itself. But as a framework, Unicorn supports multiple bindings on top of the core written in C. This makes it easy to be adopted by developers. A rich list of efficient bindings - 4 languages have been supported in version 0.9 -  lowers the barrier for every programmer.
+- **Bindings**: QEMU does not have binding itself. But as a framework, Unicorn supports multiple bindings on top of the core written in C. This makes it easy to be adopted by developers. A rich list of efficient bindings - 16 languages have been supported in version 2.0 -  lowers the barrier for every programmer.
 
 - **Lightweight**: Unicorn is much more lightweight than QEMU because we stripped all the subsystems that do not involve in CPU emulation. As a result, Unicorn is less than 10 times smaller in size and also in memory consumption.
 
