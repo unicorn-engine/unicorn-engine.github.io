@@ -4,7 +4,7 @@ title: Documentation
 permalink: /docs/
 ---
 
-Find details on the design \& implementation of Unicorn in this [BlackHat USA 2015 slides](/BHUSA2015-unicorn.pdf).
+Find details on the design & implementation of Unicorn in this [BlackHat USA 2015 slides](/BHUSA2015-unicorn.pdf).
 
 ---
 
@@ -73,11 +73,11 @@ cd bindings/python
 python setup.py install
 {% endhighlight %}
 
-For Windows, after above steps, you need to copy all the *DLL files* from the *Windows core engine* in the [Download](/download) section into directory *C:\location_to_python\Lib\site-packages\unicorn\*.
+For Windows, after above steps, you need to copy all the *DLL files* from the *Windows core engine* in the [Download](/download) section into directory *C:\location_to_python\Lib\site-packages\unicorn*.
 
 ---
 
-### 4. Precompiled binaries <img src="/images/windows.png" height="24" width="24"> <img src="img/python.png" height="24" width="24"> <img src="/images/jar.png" height="24" width="24">
+### 4. Precompiled binaries <img src="/images/windows.png" height="24" width="24"> <img src="/images/python.png" height="24" width="24"> <img src="/images/jar.png" height="24" width="24">
 
 At the moment precompiled binaries for *Windows* & *Java* are available in our [Download](/download) section.
 
@@ -107,4 +107,4 @@ After installation, find in tutorials below how to write your tools based on Uni
 
 - [Beyond QEMU](/docs/beyond_qemu.html): A quick technical comparison of Unicorn and QEMU.
 
-- [Micro-Unicorn-Engine-API-Documentation in Chinese](): This API Documentation details some Unicorn's data types, APIs, and related code implementations (currently available in Chinese only).
+- [Micro-Unicorn-Engine-API-Documentation in Chinese](https://github.com/kabeor/Unicorn-Engine-Documentation): This API Documentation details some Unicorn's data types, APIs, and related code implementations (currently available in Chinese only).
