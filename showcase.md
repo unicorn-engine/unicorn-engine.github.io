@@ -6,7 +6,7 @@ permalink: /showcase/
 
 ## Showcase
 
-In our knowledge, Unicorn has been used by **123** following products (listed in no particular order).
+In our knowledge, Unicorn has been used by **125** following products (listed in no particular order).
 
 - [Qiling](https://qiling.io): Cross-platform & multi-architecture lightweight sandbox.
 - [udbserver](https://github.com/bet4it/udbserver): A plugin for Unicorn to provide a debug server.
@@ -130,7 +130,9 @@ In our knowledge, Unicorn has been used by **123** following products (listed in
 - [ShellCodeEmulator](https://github.com/ohjeongwook/ShellCodeEmulator): Windows shellcode emulator.
 - [Frankenstein](https://github.com/seemoo-lab/frankenstein): Broadcom and Cypress firmware emulation for fuzzing and further full-stack debugging.
 - [AFLplusplus](https://github.com/AFLplusplus/AFLplusplus): A superior fork to Google's afl - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
-- [vmrp](https://github.com/zengming00/vmrp): Feature phone 'mrp' format software simulator
+- [vmrp](https://github.com/zengming00/vmrp): Feature phone 'mrp' format software simulator.
+- [Modelsim-Unicorn](https://github.com/htminuslab/Modelsim-Unicorn): Modelsim/Questa Unicorn integration via the VHDL Foreign Language Interface (FLI).
+- [Speakeasy](https://github.com/mandiant/speakeasy): A portable, modular, binary emulator designed to emulate Windows kernel and user mode malware.
 
 ---
 
