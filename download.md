@@ -16,6 +16,8 @@ See the [version history](/changelog/) for a list of changes.
 
 The latest version of the source code can be retrieved at our [Git repository](https://github.com/unicorn-engine/unicorn).
 
+Grab the latest dev build artifacts from [Github Action](https://github.com/unicorn-engine/unicorn/actions/workflows/build-uc2.yml) by picking any latest successful run and navigate to artifacts.
+
 ---
 
 ### Source archive <img src="/images/tgz.png" height="28" width="28"> <img src="/images/zip.png" height="32" width="32">
