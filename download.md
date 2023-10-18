@@ -84,6 +84,15 @@ pip install unicorn --upgrade
 
 Remember to stick "sudo" in front for root privilege if needed.
 
+Special notes for Apple Silicon users:
+
+You will need `cmake` to build the wheel locally due to a lack of affordable runners.
+
+{% highlight bash %}
+brew install cmake pkg-config
+pip install unicorn --upgrade
+{% endhighlight %}
+
 ---
 
 ### Brew package for MacOS - Binaries <img src="/images/homebrew.png" height="28" width="28"> <img src="/images/osx.png" height="28" width="28">
