@@ -51,20 +51,9 @@ Besides Haskell, Ruby, Python, Java, Go, Rust, Visual Basic, Pascal, .NET & MSVC
 
 ---
 
-### Windows - Core engine <img src="/images/windows.png" height="28" width="28">
+### Binary Downloads
 
-<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}-win32.zip" title="Download Win32 Binaries (ZIP)">Win-32</a>
-
-NOTE: This is necessary for all bindings (except Python) & also for C programming.
-
-This package contains:
-
-- README & license file.
-- The Unicorn header files (\*.h) for C programming.
-- 32-bit/64-bit DLLs for Microsoft Windows 32-bit/64-bit.
-- A sample file (sample_x86.exe)
-
-<a class="download" href="https://github.com/unicorn-engine/unicorn/releases/download/{{ post.title }}/unicorn-{{ post.title }}-win64.zip" title="Download Win64 Binaries (ZIP)">Win-64</a>
+Unicorn binaries could be found on the [Github release](https://github.com/unicorn-engine/unicorn/releases), which includes all artifacts of all platforms Unicorn supports.
 
 ---
 
