@@ -6,7 +6,7 @@ permalink: /showcase/
 
 ## Showcase
 
-In our knowledge, Unicorn has been used by **125** following products (listed in no particular order).
+In our knowledge, Unicorn has been used by **126** following products (listed in no particular order).
 
 - [Qiling](https://qiling.io): Cross-platform & multi-architecture lightweight sandbox.
 - [udbserver](https://github.com/bet4it/udbserver): A plugin for Unicorn to provide a debug server.
@@ -41,6 +41,7 @@ In our knowledge, Unicorn has been used by **125** following products (listed in
 - [Nao](https://github.com/tkmru/nao): Dead code eliminator plugin for IDA Pro.
 - [Ripr](https://github.com/pbiernat/ripr): Rip out functionality from binary code to use from Python.
 - [Unicorn.Js](https://alexaltea.github.io/unicorn.js/): A port of the Unicorn emulator for JavaScript.
+- [Capsulith](https://github.com/nazeeh111/Capsulith): Run prepared ARM64 components in browser and Node.js workers with restorable heap state.
 - [SECCON2016 CTF](https://github.com/SECCON/SECCON2016_online_CTF): Online CTF game (Crypto 200, Lost Description).
 - [Pwntools](https://github.com/Gallopsled/pwntools): CTF framework and exploit development library.
 - [Indika](https://github.com/eqv/indika): A blanket execution/min hash semantic hash tool for binary function identification.
